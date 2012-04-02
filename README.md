@@ -5,3 +5,5 @@
 更多版权信息请阅读 LICENSE.txt 文件.
 
 #帮助内容详见 common/locale/zh-CN/ 文件夹
+
+1. editing.xml,intro.xml 2012.4.2 15:46
