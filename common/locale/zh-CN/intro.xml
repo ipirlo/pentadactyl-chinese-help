@@ -5,64 +5,48 @@
 
 <document
     name="intro"
-    title="&dactyl.appName; Introduction"
+    title="&dactyl.appName; 简介"
     xmlns="&xmlns.dactyl;"
     xmlns:html="&xmlns.html;">
 
 <html:div style="text-align: center; clear: right; margin-bottom: -2.2em; padding-right: 4em;"><logo/></html:div>
 
-<h1 tag="intro">Introduction</h1>
+<h1 tag="intro">简介</h1>
 
 <p tag="intro-text"></p>
 
 <p tag="first-run">
-    If this is your first time running &dactyl.appName;, you may need some
-    time to adjust to the standard interface, which hides the menu,
-    navigation, and tool bars by default. If you find it uncomfortable to work
-    without them, you can re-enable them by typing
+	如果这是你第一次运行 &dactyl.appName;，你可能需要点时间适应其标准界面，默认地没有菜单，没有导航栏，没有工具条。倘若你觉得没有这些很不适应，则可以通过以下命令重现它们
 </p>
 <set opt="guioptions" op="+="><str delim="">mT</str><k name="CR"/></set>
 <p>
-    If you have trouble remembering commands or keyboard shortcuts, you can
-    bring up this help page at any time by typing <ex>:help</ex> or
-    <k name="F1"/>. If you find that you don't like &dactyl.appName; at all,
-    you can disable it by typing <ex>:extdisable <str delim="">&dactyl.appName;</str></ex> or
-    delete it entirely by typing <ex>:extdelete <str delim="">&dactyl.appName;</str></ex>
+	如果你觉得记住这些命令或键盘快捷键有难度，则可以通过键入 <ex>:help</ex> 或按 <k name="F1"/>键随时调出这个帮助页面。如果你发现自己一点也不喜欢 &dactyl.appName;，则可以键入 <ex>:extdisable <str delim="">&dactyl.appName;</str></ex> 命令禁用，又或者 <ex>:extdelete <str delim="">&dactyl.appName;</str></ex> 完全删除它。 
 </p>
 
-<h2 tag="overview">Help topics</h2>
+<h2 tag="overview">帮助主题</h2>
 
 <ol tag="topics-list"></ol>
 
 <p>
-    You can also jump directly to the help of a specific command,
-    key mapping, or topic via the <ex>:help</ex> command.
+	你也可以通过 <ex>:help</ex> 命令直接跳转到某一特定命令、键映射或主题的帮助内容上。
 </p>
 
 <example><ex>:help :help</ex></example>
 
-<h2 tag="features">Features</h2>
+<h2 tag="features">特性</h2>
 
 <ul tag="features-list"></ul>
 
-<h2 tag="official-plugins">Official Plugins</h2>
+<h2 tag="official-plugins">官方插件</h2>
 
 <p>
-    In case you're not sufficiently overwhelmed by &dactyl.appName;'s default
-    feature set, don't despair. You can find more entertainment in the
-    officially supported (read: you can flame us when they stop working)
-    <link topic="&dactyl.plugins;">plugins</link>.
+	或许你对 &dactyl.appName; 的默认特性集并不十分满意，也不要失望。你还可以在官方支持的<link topic="&dactyl.plugins;">插件</link>里找到更多好玩的。
 </p>
 
-<h2 tag="contact bugs">Contact</h2>
+<h2 tag="contact bugs">联系</h2>
 
 <p>
-    Please send comments, questions, or patches to the
-    <link topic="&dactyl.list.href;">mailing list</link>,
-    where we will do our best to answer any inquiries. You can also
-    find more information on the <link topic="&dactyl.home;">homepage</link>.
-    Issue reports can be entered in the
-    <link topic="&dactyl.issues;">issue tracker</link>.
+	请发送评论，问题或补丁到<link topic="&dactyl.list.href;">邮件列表</link>，我们将尽我们最大努力回答询问。你也可以在<link topic="&dactyl.home;">主页</link>找到更多信息。报告问题的话可以到 <link topic="&dactyl.issues;">issue tracker</link>。
 </p>
 
 </document>
