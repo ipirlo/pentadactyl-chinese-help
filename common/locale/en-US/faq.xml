@@ -9,8 +9,9 @@
     xmlns="&xmlns.dactyl;"
     xmlns:html="&xmlns.html;">
 
-            <h1 style="margin-top: 0;">Frequently Asked Questions</h1>
+            <h1 style="margin-top: 0;">常见问题解答</h1>
             <p>
+		以下是我们注意到的最常见的一些问题,以及最可能令人满意的答案.在你到<link topic="&dactyl.list.href;">邮件列表</link>又或 <link topic="&dactyl.irc;">irc 频道</link>上发问之前,请稍稍花些时间在 FAQ 中找找你可能需要的答案.也请细读 <link topic="&dactyl.hg.latest;&dactyl.name;/NEWS">NEWS file</link>,这儿列出了最新所作的更改,兴许会影响到你的原来习惯.
                 Below is a list of some of the commonest questions that come to
                 our attention, along with their hopefully satisfactory answers.
                 Please take a minute to search for your answers here before
@@ -24,7 +25,7 @@
             <toc start="2"/>
 
             <h2 tag="faq-general">General</h2>
-            <h3 tag="faq-fork">Why did Pentadactyl split from Vimperator?</h3>
+            <h3 tag="faq-fork">Pentadactyl 为什么从 Vimperator 分出来?Why did Pentadactyl split from Vimperator?</h3>
             <p>
                 The reasons for the fork were mostly political, but mostly
                 boil down to the fact that the current maintainer, while
