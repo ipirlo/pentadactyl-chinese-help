@@ -9,34 +9,25 @@
     xmlns="&xmlns.dactyl;"
     xmlns:html="&xmlns.html;">
 
-<h1 tag="text-area text-field editing">Editing Text Fields</h1>
+<h1 tag="text-area text-field editing">编辑文本域</h1>
 <toc start="2"/>
 
 <p>
-    &dactyl.appName; provides several ways to edit text areas or input fields.
-    After switching focus to a text field, Insert mode or Text Edit mode is
-    activated, depending on your <o>insertmode</o> settings. You can also
-    use an <link topic="'editor'">external editor</link>.
+	&dactyl.appName; 提供了许多方式来编辑文本区域或输入域。在切换焦点到文本域后，根据你 <o>insertmode</o> 的设置值，插入模式或文本编辑模式被激活。你也可以使用一个<link topic="'editor'">外部编辑器</link>。
 </p>
 
-<h2 tag="insert-mode insert">Insert mode</h2>
+<h2 tag="insert-mode insert">插入模式</h2>
 
 <p>
-    In Insert mode, all keys except for those described in the
-    <link topic="i-map-index">index</link> are passed directly to &dactyl.host;.
+	在插入模式里，所有的键都被 &dactyl.host; 直接接收，除了 <link topic="i-map-index">index</link> 中所描述的那些。
 </p>
 
 
-<h2 tag="text-edit-mode text-edit">Text Edit mode</h2>
+<h2 tag="text-edit-mode text-edit">文本编辑模式</h2>
 
 <p>
-    Text Edit mode provides basic Vim-like text editing. It can be entered
-    from Insert mode by pressing <k name="C-t" mode="I"/> or started directly
-    when a text area is focused if <o>insertmode</o> is unset. See the
-    <link topic="t-map-index">index</link> for a list of currently supported
-    mappings.
+	文本编辑模式提供基本的类 Vim 文本编辑方式。你可以按 <k name="C-t" mode="I"/> 进入模式，也可以在 <o>insertmode</o> 设置为非值时通过聚焦文本区域直接进入。请点击 <link topic="t-map-index">index</link> 查看目前支持的键映射。
 </p>
-
 </document>
 
 <!-- vim:se sts=4 sw=4 et: -->
