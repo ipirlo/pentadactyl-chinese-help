@@ -11,7 +11,7 @@
 
             <h1 style="margin-top: 0;">常见问题解答</h1>
             <p>
-		以下是我们注意到的最常见的一些问题,以及最可能令人满意的答案.在你到<link topic="&dactyl.list.href;">邮件列表</link>又或 <link topic="&dactyl.irc;">irc 频道</link>上发问之前,请稍稍花些时间在 FAQ 中找找你可能需要的答案.也请细读 <link topic="&dactyl.hg.latest;&dactyl.name;/NEWS">NEWS file</link>,这儿列出了最新所作的更改,兴许会影响到你的原来习惯.
+		以下是我们注意到的最常见的一些问题,以及最可能令人满意的答案.在你到<link topic="&dactyl.list.href;">邮件列表</link>又或 <link topic="&dactyl.irc;">irc 频道</link>上发问之前,请稍稍花些时间在 FAQ 中找找你可能需要的答案.也请细读 <link topic="&dactyl.hg.latest;&dactyl.name;/NEWS">NEWS file</link>,这儿列出了最新所作的更改,兴许会影响到你的原来的使用习惯.
                 Below is a list of some of the commonest questions that come to
                 our attention, along with their hopefully satisfactory answers.
                 Please take a minute to search for your answers here before
@@ -27,6 +27,7 @@
             <h2 tag="faq-general">General</h2>
             <h3 tag="faq-fork">Pentadactyl 为什么从 Vimperator 分出来?Why did Pentadactyl split from Vimperator?</h3>
             <p>
+		从 Vimperator 分出更多是因为政治上的原因,但主要要归结到 Vimperator 的现在的维护者,已经数年没有对项目做一点实质性的贡献,而却仍持有完全的编辑控制权,另外还积极地鼓励捐款,但又不甚透明.我们认为后者是对我们开发者及用户的污辱,在这种被冒犯感增强到一定的度时我们就觉得应该离开原项目了.
                 The reasons for the fork were mostly political, but mostly
                 boil down to the fact that the current maintainer, while
                 making no substantial contributions to the project for several
@@ -37,6 +38,7 @@
                 of the degree of offense felt compelled to leave the project.
             </p>
             <p>
+		不过,虽然我们已经不再xxxx,我们在过去的几年里仍然投入了可观的时间、精力,我们仍在用它,也关心它.为此,我们决定公开我们个人所做的更改,于是就决定以另外一个不同的名字继续开发这个.
                 However, though we could no longer justify supporting the
                 Vimperator project, we've invested considerable time and
                 energy into the code over these past several years and still
@@ -45,8 +47,9 @@
                 the extension under a different name.
             </p>
 
-            <h3 tag="faq-differences">What differentiates Pentadactyl from Vimperator?</h3>
+            <h3 tag="faq-differences">Pentadactyl 与 Vimperator 怎么区分的What differentiates Pentadactyl from Vimperator?</h3>
             <p>
+		最大的区别是 Vimperator 里最活跃的开发者都迁移到 Pentadactyl 上.	
                 The main difference is that Vimperator's most active
                 developers have moved on to Pentadactyl. More qualitative
                 changes may be found in the
