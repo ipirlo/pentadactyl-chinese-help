@@ -8,26 +8,21 @@
     xmlns:html="&xmlns.html;">
 
 <p replace="intro-text">
-    <link topic="&dactyl.apphome;">&dactyl.appName;</link> is a
-    free browser add-on for &dactyl.host;, designed to make browsing more
-    efficient and especially more keyboard accessible. Largely inspired by the
-    <link topic="http://www.vim.org">Vim</link> text editor, the appearance
-    and finger feel should be familiar to Vim users.
+    <link topic="&dactyl.apphome;">&dactyl.appName;</link> 是一个 &dactyl.host; 免费扩展,设计用于更高效地浏览网页,尤其可以更多地用到键盘.它很大程度上受启于 <link topic="http://www.vim.org">Vim</link> 文本编辑器,所以其外观与指感对 Vim 用户来说应该很熟悉.
 </p>
 
 <ol tag="topics-list" replace="topics-list">
     <li>
-        <link topic="tutorial">Quick-start tutorial</link>:
-        A quick-start tutorial for new users.
+        <link topic="tutorial">快速入门教程</link>:
+	为新入用户准备的快速入门教程.
     </li>
     <li>
-        <link topic="starting">Starting &dactyl.appName;</link>:
-        How &dactyl.appName; starts up, where it reads the config file, etc.
+        <link topic="starting">启动 &dactyl.appName;</link>:
+	&dactyl.appName; 如何启动,在哪个位置读取的配置文件,等等.
     </li>
     <li>
-        <link topic="browsing">Browsing</link>:
-        Basic key mappings and commands needed for a browsing
-        session (how to open a web page, go back in history, etc.)
+        <link topic="browsing">网页浏览</link>:
+	网页浏览所需的基本键映射与命令(怎样打开网页,在历史中后退,等等.)
     </li>
     <li>
         <link topic="buffer">Buffer</link>:
@@ -35,35 +30,36 @@
         etc.)
     </li>
     <li>
-        <link topic="cmdline">Command Line mode</link>:
-        Command-line editing.
+        <link topic="cmdline">命令行模式</link>:
+	命令行的编辑.
     </li>
     <li>
-        <link topic="editing">Editing text</link>:
-        Text area and input field editing.
+        <link topic="editing">文本编辑</link>:
+	文本区域与输入域的编辑.
     </li>
     <li>
-        <link topic="options">Options</link>:
-        A description of all options.
+        <link topic="options">选项</link>:
+	所有选项绍介.
     </li>
     <li>
-        <link topic="pattern">Text search commands</link>:
-        Searching for text in the current buffer.
+        <link topic="pattern">文本搜索命令</link>:
+	在当前缓冲器搜索文本.
     </li>
     <li>
-        <link topic="tabs">Tabs</link>:
-        Managing your tabbed browsing session.
+        <link topic="tabs">标签页</link>:
+	管理你的标签式网页浏览会话.
     </li>
     <li>
         <link topic="hints">Hints</link>:
-        Selecting hyperlinks and other page elements.
+	选择超链接或其他页面元素.
     </li>
     <li>
-        <link topic="map">Keyboard shortcuts and commands</link>:
-        Defining new key mappings, abbreviations and user commands.
+        <link topic="map">键盘快捷键与命令.</link>:
+	定义新的键映射,缩略词与用户命令.
     </li>
     <li>
         <link topic="eval">Expression evaluation</link>:
+	执行 JavaScript.
         Executing JavaScript.
     </li>
     <li>
@@ -75,47 +71,47 @@
         Using macros to repeat recurring workflows.
     </li>
     <li>
-        <link topic="autocommands">Automatic commands</link>:
-        Automatically executing code on certain events.
+        <link topic="autocommands">自动化命令.</link>:
+	在特定事件上自动执行代码命令.
     </li>
     <li>
-        <link topic="print">Printing</link>:
-        Printing pages.
+        <link topic="print">打印</link>:
+	打印页面.
     </li>
     <li>
-        <link topic="gui">&dactyl.appName;'s GUI</link>:
-        Accessing &dactyl.host; menus, dialogs and the sidebar.
+        <link topic="gui">&dactyl.appName; 图形用户界面</link>:
+	访问 &dactyl.host; 菜单,对话框和侧边栏.
     </li>
     <li>
-        <link topic="styling">Styling the GUI and web pages</link>:
-        Changing the styling of content pages and &dactyl.appName; itself.
+        <link topic="styling">样式化图形用户界面和网页</link>:
+	更改内容页面及 &dactyl.appName; 本身的样式.
     </li>
     <li>
         <link topic="message">Error and informational messages</link>:
         A description of informational and error messages.
     </li>
     <li>
-        <link topic="privacy">Privacy and sensitive information</link>:
-        How to manage your private data while browsing.
+        <link topic="privacy">隐私及敏感信息</link>:
+	浏览时如何管理你的隐私数据.
     </li>
     <li>
-        <link topic="developer">Developer information</link>:
-        How to write plugins and documentation.
+        <link topic="developer">开发者信息</link>:
+	如何编写插件及文档.
     </li>
     <li>
-        <link topic="various">Various commands</link>:
-        Other help which doesn't readily fit into any other category.
+        <link topic="various">其余命令</link>:
+	其余无法归入其他类别的帮助内容.
     </li>
     <li>
-        <link topic="plugins">Plugins</link>:
-        Documentation for any plugins you have installed.
+        <link topic="plugins">插件</link>:
+	你所安装的任何插件的使用文档.
     </li>
     <li>
         <link topic="faq">FAQ</link>:
-        Frequently asked questions.
+        常见问答.
     </li>
     <li>
-        <link topic="versions">Version information</link>:
+        <link topic="versions">版本信息</link>:
         A detailed list of differences between each of the released versions of
         &dactyl.appName;.
     </li>
