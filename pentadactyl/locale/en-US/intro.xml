@@ -25,9 +25,8 @@
 	网页浏览所需的基本键映射与命令(怎样打开网页,在历史中后退,等等.)
     </li>
     <li>
-        <link topic="buffer">Buffer</link>:
-        Operations on the current document (scrolling, copying text,
-        etc.)
+        <link topic="buffer">缓冲区</link>:
+	操作当前页面(滚动,拷贝,等等)
     </li>
     <li>
         <link topic="cmdline">命令行模式</link>:
@@ -58,17 +57,16 @@
 	定义新的键映射,缩略词与用户命令.
     </li>
     <li>
-        <link topic="eval">Expression evaluation</link>:
+        <link topic="eval">表达式计算</link>:
 	执行 JavaScript.
-        Executing JavaScript.
     </li>
     <li>
-        <link topic="marks">Marks</link>:
-        Using bookmarks, QuickMarks, history and local marks.
+        <link topic="marks">标记</link>:
+	使用书签,快速标记,历史与本地标记.
     </li>
     <li>
-        <link topic="repeat">Repeating commands</link>:
-        Using macros to repeat recurring workflows.
+        <link topic="repeat">重复命令</link>:
+	使用宏命令执行重复的工作.
     </li>
     <li>
         <link topic="autocommands">自动化命令.</link>:
@@ -87,8 +85,8 @@
 	更改内容页面及 &dactyl.appName; 本身的样式.
     </li>
     <li>
-        <link topic="message">Error and informational messages</link>:
-        A description of informational and error messages.
+        <link topic="message">错误信息与提示信息</link>:
+	提示性信息及错误信息的概述.
     </li>
     <li>
         <link topic="privacy">隐私及敏感信息</link>:
@@ -112,34 +110,33 @@
     </li>
     <li>
         <link topic="versions">版本信息</link>:
-        A detailed list of differences between each of the released versions of
-        &dactyl.appName;.
+	&dactyl.appName; 每个发行版间的不同处列表.
     </li>
     <li>
-        <link topic="index">Index</link>:
-        An index of all commands and options.
+        <link topic="index">索引</link>:
+	所有命令与选项的索引表.
     </li>
 </ol>
 
 <ul tag="features-list" replace="features-list">
-    <li>Vim-like key bindings (<k>h</k>, <k>j</k>, <k>gg</k>, <k>ZZ</k>, <k name="C-f"/>, etc.)</li>
-    <li><link topic="cmdline.xml">Ex commands</link> (<ex>:quit</ex>, <ex>:open www.foo.com</ex>, …)</li>
-    <li>Powerful tab completion for all commands and options</li>
-    <li>Powerful <t>privacy</t> features</li>
-    <li><link topic="pattern.xml">Page search</link> with many fixes for long-standing Firefox annoyances</li>
-    <li>Quick and powerful <link topic="hints">keyboard navigation</link> for links, input fields, etc.</li>
-    <li>Vim-like <link topic="status-line">status line</link></li>
-    <li>Keyboard <t>macros</t>, along with custom key mappings and commands</li>
-    <li>Minimal GUI, along with commands to <link topic=":toolbarhide">hide</link> and <link topic=":toolbartoggle">toggle</link> toolbars and menus</li>
-    <li>Ability to <ex>:source</ex> JavaScript, CSS, and &dactyl.appName; command files</li>
-    <li>Ability to <link topic="marks">mark</link> the current page position and return to it</li>
-    <li>Count support for many commands (<tt>3</tt><k name="C-o"/> will go back <tt>3</tt> pages)</li>
-    <li>Visual bell for errors (<o>visualbell</o>)</li>
-    <li><link topic="marks">Marks</link> support (<k>m</k><tt>M</tt> to set mark <tt>M</tt>, <k>'</k><tt>M</tt> to jump to it)</li>
-    <li><link topic="quickmarks">QuickMark</link> support</li>
-    <li><link topic="I_&lt;C-i>">Editing of text fields</link> with an <link topic="'editor'">external editor</link></li>
-    <li><link topic="autocommands">AutoCommands</link> to execute actions on certain events</li>
-    <li>A comprehensive help system, explaining all <link topic="cmdline.xml">commands</link>, <link topic="mapping">mappings</link>, <t>options</t>, and <t>plugins</t></li>
+    <li>类于 Vim 的键绑定 (<k>h</k>, <k>j</k>, <k>gg</k>, <k>ZZ</k>, <k name="C-f"/>,等等)</li>
+    <li><link topic="cmdline.xml">Ex 命令</link> (<ex>:quit</ex>, <ex>:open www.foo.com</ex>, …)</li>
+    <li>所有命令与选项都具备强大的 tab 补齐功能.</li>
+    <li>强大的<t>privacy</t>特性.</li>
+    <li><link topic="pattern.xml">页面搜索,解决了许多 Firefox 的长期恼人问题.Page search</link> with many fixes for long-standing Firefox annoyances</li>
+    <li>链接、输入域里迅捷而强大的 <link topic="hints">键盘导航</link>,等等. </li>
+    <li>类似于 Vim 的<link topic="status-line">状态栏</link></li>
+    <li>键盘录制 <t>macros</t>,及自定义键映射与命令.</li>
+    <li>极简的图形用户界面,用于<link topic=":toolbarhide">隐藏</link>和<link topic=":toolbartoggle">切换</link>工具栏、菜单的命令.</li>
+    <li>使用 <ex>:source</ex> 命令获取外部 JavaScript, CSS, 和 &dactyl.appName; 命令文件</li>
+    <li>能够<link topic="marks">标记</link>当前页面位置然后返回该位置.</li>
+    <li>许多命令都支持数字操作(<tt>3</tt><k name="C-o"/> 将后退<tt>3</tt>页)</li>
+    <li>错误时可视化提醒.(<o>visualbell</o>)</li>
+    <li><link topic="marks">标记</link>支持 (<k>m</k><tt>M</tt> 设置标志 <tt>M</tt>, <k>'</k><tt>M</tt> 跳转到该标志位置)</li>
+    <li>支持<link topic="quickmarks">快速标记</link></li>
+    <li>调用<link topic="'editor'">外部编辑器</link><link topic="I_&lt;C-i>">编辑文本域</link></li>
+    <li><link topic="autocommands">自动命令</link>用于在某些特定事件时执行动作.</li>
+    <li>完备的帮助系统,解释了所有<link topic="cmdline.xml">命令</link>, <link topic="mapping">映射</link>, <t>options</t>, and <t>plugins</t></li>
 </ul>
 </overlay>
 
