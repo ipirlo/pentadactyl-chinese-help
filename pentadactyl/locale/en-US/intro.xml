@@ -42,7 +42,7 @@
     </li>
     <li>
         <link topic="pattern">文本搜索命令</link>:
-	在当前缓冲器搜索文本.
+	在当前缓冲区搜索文本.
     </li>
     <li>
         <link topic="tabs">标签页</link>:
@@ -53,7 +53,7 @@
 	选择超链接或其他页面元素.
     </li>
     <li>
-        <link topic="map">键盘快捷键与命令.</link>:
+        <link topic="map">键盘快捷键与命令</link>:
 	定义新的键映射,缩略词与用户命令.
     </li>
     <li>
@@ -69,7 +69,7 @@
 	使用宏命令执行重复的工作.
     </li>
     <li>
-        <link topic="autocommands">自动化命令.</link>:
+        <link topic="autocommands">自动化命令</link>:
 	在特定事件上自动执行代码命令.
     </li>
     <li>
@@ -82,11 +82,11 @@
     </li>
     <li>
         <link topic="styling">样式化图形用户界面和网页</link>:
-	更改内容页面及 &dactyl.appName; 本身的样式.
+	更改内容页及 &dactyl.appName; 本身的样式.
     </li>
     <li>
         <link topic="message">错误信息与提示信息</link>:
-	提示性信息及错误信息的概述.
+	提示性信息及错误信息概述.
     </li>
     <li>
         <link topic="privacy">隐私及敏感信息</link>:
@@ -110,7 +110,7 @@
     </li>
     <li>
         <link topic="versions">版本信息</link>:
-	&dactyl.appName; 每个发行版间的不同处列表.
+	&dactyl.appName; 每个发行版间的区别列表.
     </li>
     <li>
         <link topic="index">索引</link>:
@@ -121,10 +121,10 @@
 <ul tag="features-list" replace="features-list">
     <li>类于 Vim 的键绑定 (<k>h</k>, <k>j</k>, <k>gg</k>, <k>ZZ</k>, <k name="C-f"/>,等等)</li>
     <li><link topic="cmdline.xml">Ex 命令</link> (<ex>:quit</ex>, <ex>:open www.foo.com</ex>, …)</li>
-    <li>所有命令与选项都具备强大的 tab 补齐功能.</li>
-    <li>强大的<t>privacy</t>特性.</li>
-    <li><link topic="pattern.xml">页面搜索,解决了许多 Firefox 的长期恼人问题.Page search</link> with many fixes for long-standing Firefox annoyances</li>
-    <li>链接、输入域里迅捷而强大的 <link topic="hints">键盘导航</link>,等等. </li>
+    <li>所有命令与选项都具备强大的 tab 补全功能.</li>
+    <li>强大的 <t>privacy</t> 特性.</li>
+    <li><link topic="pattern.xml">页面搜索</link>,解决了 Firefox 的许多长期恼人的问题.</li>
+    <li>链接、输入域里可以使用迅捷而强大的<link topic="hints">键盘导航</link>,等等. </li>
     <li>类似于 Vim 的<link topic="status-line">状态栏</link></li>
     <li>键盘录制 <t>macros</t>,及自定义键映射与命令.</li>
     <li>极简的图形用户界面,用于<link topic=":toolbarhide">隐藏</link>和<link topic=":toolbartoggle">切换</link>工具栏、菜单的命令.</li>
@@ -135,8 +135,8 @@
     <li><link topic="marks">标记</link>支持 (<k>m</k><tt>M</tt> 设置标志 <tt>M</tt>, <k>'</k><tt>M</tt> 跳转到该标志位置)</li>
     <li>支持<link topic="quickmarks">快速标记</link></li>
     <li>调用<link topic="'editor'">外部编辑器</link><link topic="I_&lt;C-i>">编辑文本域</link></li>
-    <li><link topic="autocommands">自动命令</link>用于在某些特定事件时执行动作.</li>
-    <li>完备的帮助系统,解释了所有<link topic="cmdline.xml">命令</link>, <link topic="mapping">映射</link>, <t>options</t>, and <t>plugins</t></li>
+    <li><link topic="autocommands">自动命令</link>用于在某些特定事件时执行动作</li>
+    <li>完备的帮助系统,解释所有<link topic="cmdline.xml">命令</link>, <link topic="mapping">映射</link>, <t>options</t>, and <t>plugins</t></li>
 </ul>
 </overlay>
 
