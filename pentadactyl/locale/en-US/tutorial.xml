@@ -5,48 +5,35 @@
 
 <document
     name="tutorial"
-    title="&dactyl.appName; Tutorial"
+    title="&dactyl.appName; 教程"
     xmlns="&xmlns.dactyl;"
     xmlns:html="&xmlns.html;">
 
-<h1 tag="tutorial">Quick-start tutorial</h1>
+<h1 tag="tutorial">快速入门教程</h1>
 
 <note>
-    This is a quick-start tutorial to help new users get up and running
-    in &dactyl.appName;. It is not intended as a full reference explaining all
-    features.
+    这是个快速入门教程,用于帮助新入用户迅速上手、运行 &dactyl.appName;.但它并非作为一个完全的参考,解释方方面面. 
 </note>
 
 <p>
-    If you've started using &dactyl.appName; from scratch (i.e., without any
-    customization), you should be looking at this help page in a relatively
-    bare-looking window. The menubar, navigation bar, and bookmark bars are hidden.
-    In case you missed the notice in the <t>intro</t>, you can
-    regain these by issuing the command
+    假如你是全新开始使用 &dactyl.appName; 的(即,没有任何自定义),则你应该会在一个相对简单的窗口中看到本帮助页面.菜单栏,导航栏及书签栏都隐藏不见.假如你忘记了 <t>intro</t> 章节中的提示,则你可以通过运行以下命令重新显示它们:
 </p>
 
 <set opt="go" op="+="><str delim="">mTB</str><k name="CR"/></set>
 
 <p>
-    where <k name="CR"/> represents pressing the <k name="Enter" link="false"/>
-    or <k name="Return" link="false"/> key. If you're a veteran Vim user, this
-    should look familiar.
+    其中,<k name="CR"/> 表示按下 <k name="Enter" link="false"/>
+    键或 <k name="Return" link="false"/> 键. 假如你是个 Vim 熟手,这看来应该很熟悉.
 </p>
 
 <p>
-    However, in this author's opinion, the best way to get familiar with
-    &dactyl.appName; is to leave these disabled for now. (The above action can
-    be reversed with <se opt="go" op="&amp;"/><k name="CR"/>) You can have a
-    look at the <o>guioptions</o> help entry for more information on this.
+    不过,在作者看来,最好的熟悉 &dactyl.appName; 的办法是现在禁用它们.(上面的动作可以通过 <se opt="go" op="&amp;"/><k name="CR"/>反转)你可以查看 <o>guioptions</o> 帮助节取得更多相关信息.
 </p>
 
-<h2 tag="modal">&dactyl.appName;'s modal interface</h2>
+<h2 tag="modal">&dactyl.appName; 的模式界面</h2>
 
 <p>
-    &dactyl.appName;'s power, like Vim's, comes from its modal interface. Keys have
-    different meanings depending on which mode the browser is in. &dactyl.appName; has
-    several modes, but the 2 most important are <em>Normal</em> mode and
-    <em>Command Line</em> mode (see <t>modes</t> for the full picture).
+    &dactyl.appName; 的强大,例于 Vim,来自于它的模式界面.浏览器所处的模式不同,决定了键所包含的意义.&dactyl.appName; 有许多模式,但其中最重要的两个是 <em>正常模式</em>与<em>命令行模式</em>( <t>modes</t> 查看更多).
 </p>
 
 <p>
