@@ -33,47 +33,35 @@
 <h2 tag="modal">&dactyl.appName; 的模式界面</h2>
 
 <p>
-    &dactyl.appName; 的强大,例于 Vim,来自于它的模式界面.浏览器所处的模式不同,决定了键所包含的意义.&dactyl.appName; 有许多模式,但其中最重要的两个是 <em>正常模式</em>与<em>命令行模式</em>( <t>modes</t> 查看更多).
+    &dactyl.appName; 的强大,例于 Vim,来自于它的模式界面.浏览器所处的模式不同,决定了键所包含的意义.&dactyl.appName; 有许多模式,但其中最重要的两个是<em>正常模式</em>与<em>命令行模式</em>( <t>modes</t> 查看更多).
 </p>
 
 <p>
-    When &dactyl.appName; starts, it is in Normal mode by default. This is probably where
-    you will spend the majority of your time.
+    &dactyl.appName; 启动时, 默认是处于正常模式.这也将会是你花上大部分时间的.
 </p>
 
 <p>
-    The other core mode of &dactyl.appName;, Command Line mode, can be entered from
-    Normal mode by typing a <k>:</k> (colon). You will frequently see &dactyl.appName;
-    commands start with a <k>:</k>, indicating that what follows is a command.
+    &dactyl.appName; 的另一个核心模式,命令行模式,可以通过在正常模式下键入 <k>:</k> (冒号)进入.你将经常看到以 <k>:</k> 起头的 &dactyl.appName; 命令,表示后面所跟的是一个命令.
 </p>
 
 <p>
-    To return to Normal mode from Command Line mode, type <k name="Esc"/>.
-    Pressing <k name="Esc"/> will also return you to Normal mode from most
-    other &dactyl.appName; modes.
+    要从命令行模式回到正常模式,请按 <k name="Esc"/>. <k name="Esc"/> 键也会让你从其他任何 &dactyl.appName; 模式返回正常模式.
 </p>
 
-<h2 tag="getting-help">Getting help</h2>
+<h2 tag="getting-help">获取帮助</h2>
 
 <p>
-    Vim is a great editor but it's not much of a web browser. So even seasoned Vim
-    users will probably have to look at &dactyl.appName;'s documentation sooner or later.
-    Most of the documentation for &dactyl.appName;'s features are easily found using the
-    <ex>:help</ex> command. For example, you can find help on the <ex>:help</ex> command
-    by typing
+    Vim 是个杰出的编辑器但它毕竟不算是网页浏览器.因此,即便是老练的 Vim 用户可能早晚也需要查阅 &dactyl.appName; 文档. &dactyl.appName; 特性的大部分方式文档都可以通过命令 <ex>:help</ex> 取得.比如,你可以键入以下命令找到关于 <ex>:help</ex> 命令的帮助
 </p>
 
 <code><ex>:help :help<k name="CR"/></ex></code>
 
 <p>
-    Similarly, help on configurable options is available with
-    <ex>:help '<a>option_name</a>'</ex>. (Note the single quotes
-    around the option name as in Vim.) Information on all available
-    options is, predictably, <ex>:help options</ex>.
+    类似的,可配置的选项的帮助可以通过 <ex>:help '<a>option_name</a>'</ex> 取得.(请注意选项名两侧的单引号,是与 Vim 一样的.)所有选项的信息,如你可以料到的,使用 <ex>:help options</ex> 取得.
 </p>
 
 <p>
-    And you can find out about the <k>gt</k> and <k>gT</k> mapping with
+    使用下述命令可以取得映射 <k>gt</k> 与 <k>gT</k> 的信息
 </p>
 
 <code>
@@ -82,97 +70,87 @@
 </code>
 
 <p>
-    Finally, in addition to the help system itself, <ex>:listcommands</ex>,
-    <ex>:listkeys</ex> and <ex>:listoptions</ex> are useful quick-reference
-    commands.
+    最后,除了帮助系统外, <ex>:listcommands</ex>,<ex>:listkeys</ex> 与 <ex>:listoptions</ex> 也是非常有用的快速参考.
 </p>
 
-<h2 tag="living-mouseless">Mouseless</h2>
+<h2 tag="living-mouseless">无鼠标化</h2>
 
-<em>— or how I learned to stop worrying and love the 80+ buttons I already have.</em>
+<em>— 或说我怎样才能停止担心or how I learned to stop worrying and love the 80+ buttons I already have.</em>
 
 <p>
-    The efficiency of &dactyl.appName;, as with the legendary editor it was inspired by,
-    relies on the user being able to keep his fingers on the keyboard where they
-    can do the most good. While there are some areas where the mouse is clearly
-    superior at, such as GUI design or some games, &dactyl.appName; acts on the
-    assumption that a web browser doesn't have to be one of those.
+    如启发它的传奇编辑器 Vim 一样, &dactyl.appName; 的高效在于用户把手指保持在键盘上就能完成绝大部分事情.当然,在某些领域里,鼠标要更擅长,比如 GUI 设计,或者游戏,不过, &dactyl.appName; 认为一个 web 浏览器不必成为以上一种.
 </p>
 
 <p>
-    Here are some areas where the mouse is typically considered indisposable, and
-    how &dactyl.appName; challenges this preconception.
+    以下一些领域,鼠标通常被认为是必须的,你可以看看 &dactyl.appName; 是如何挑战传统之见的.
 </p>
 
-<h2 tag="keyboard-scrolling">Scrolling</h2>
+<h2 tag="keyboard-scrolling">滚动</h2>
 
 <p>
-    Scrolling the browser window is done with simple keystrokes:
+    简单击键滚动浏览器窗口:
 </p>
 
 <dl>
     <dt><k>j</k>/<k>k</k></dt>
     <dd>
-        scroll window down/up by one line, respectively
+        相应地下/上滚动窗口一行的距离
     </dd>
     <dt><k>h</k>/<k>l</k></dt>
     <dd>
-        scroll window left/right
+        左/右滚动窗口
     </dd>
     <dt><k name="C-f"/>/<k name="C-b"/></dt>
     <dd>
-        scroll down/up by one page
+        下/上滚动一页的距离
     </dd>
     <dt><k name="C-d"/>/<k name="C-u"/></dt>
     <dd>
-        scroll down/up by 1/2 page
+        下/上滚动半页的距离
     </dd>
 </dl>
 
 <p>
-    Your standard buttons (<k name="Up"/>/<k name="Down"/>/<k name="PageUp"/>/<k name="PageDown"/>) will
-    also work as expected.
+    你的标准按键 (<k name="Up"/>/<k name="Down"/>/<k name="PageUp"/>/<k name="PageDown"/>) 也将如你所料的那样工作.
 </p>
 
-<h2 tag="history-navigation tab-navigation">History and tabs</h2>
+<h2 tag="history-navigation tab-navigation">历史记录与标签页</h2>
 
 <p>
-    History navigation (e.g., <em>Back</em>, <em>Forward</em>) is done similarly to
-    scrolling.
+    历史记录导航 (比如, <em>Back</em>, <em>Forward</em>) 是近似与滚动的操作的.
 </p>
 
 <dl>
     <dt><k>H</k>/<k>L</k></dt>
     <dd>
-        move back/forward in the current tab's history
+        在当前标签页的历史记录里后退/前进
     </dd>
     <dt><k name="C-o"/>/<k name="C-i"/></dt>
     <dd>
-        move back/forward in the current tab's jump list
+        在当前标签页的跳转列表中后退/前进
     </dd>
 </dl>
 
 <p>
-    Move between tabs using these keystrokes which may also be familiar to
-    tabbing Vimmers:
+    使用按键在标签页间切换可能在使用 Vim 标签的 Vimmers 看来很相似:
 </p>
 
 <dl>
     <dt><k>gt</k>/<k name="C-n"/></dt>
     <dd>
-        go to the next tab
+        切换到下个标签页
     </dd>
     <dt><k>gT</k>/<k name="C-p"/></dt>
     <dd>
-        go to the previous tab
+        切换到上个标签页
     </dd>
     <dt><k>g0</k>/<k>g$</k></dt>
     <dd>
-        go to the first/last tab
+        切换到首/末标签页
     </dd>
     <dt><k>d</k></dt>
     <dd>
-        close the active tab (delete the buffer)
+        关闭当前标签页(删除缓冲器)
     </dd>
 </dl>
 
@@ -369,3 +347,5 @@
 </document>
 
 <!-- vim:se sts=4 sw=4 et: -->
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<?xml-stylesheet type="text/xsl" href="dactyl://content/help.xsl"?>
