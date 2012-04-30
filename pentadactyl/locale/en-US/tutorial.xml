@@ -75,7 +75,7 @@
 
 <h2 tag="living-mouseless">无鼠标化</h2>
 
-<em>— 或说我怎样才能停止担心or how I learned to stop worrying and love the 80+ buttons I already have.</em>
+<em>— 或说我怎样才能停止担心也停止爱着我那已有的 80 多个按钮.</em>
 
 <p>
     如启发它的传奇编辑器 Vim 一样, &dactyl.appName; 的高效在于用户把手指保持在键盘上就能完成绝大部分事情.当然,在某些领域里,鼠标要更擅长,比如 GUI 设计,或者游戏,不过, &dactyl.appName; 认为一个 web 浏览器不必成为以上一种.
@@ -155,10 +155,7 @@
 </dl>
 
 <p>
-    To open a web page in a new tab, use <ex>:tabopen <a>url</a></ex>. To open a URL in
-    the current tab, use <ex>:open</ex>. The Normal mode mappings <k>t</k> and <k>o</k>,
-    respectively, map to these commands, so the following pairs of sequences are
-    equivalent:
+    要在新标签中打开网页,使用 <ex>:tabopen <a>url</a></ex> 命令. <ex>:open</ex> 则在当前标签页中打开 URL. 正常模式下,<k>t</k> 与 <k>o</k> 相应映射到这些命令,也因此下面的成对命令的结果是一样的:
 </p>
 
 <code>
@@ -172,176 +169,125 @@
 <h2 tag="hints-tutorial">Some hints about surfing…</h2>
 
 <p>
-    So now you can navigate around in &dactyl.appName;. But wait… how do you <em>open</em> a
-    page or tab linked in a web page? How do you <em>click</em> on all those links
-    without your tailed friend?
+    好了,现在你可以在 &dactyl.appName; 中导航了.不过等等...你要怎样 <em>open</em> 一个页面或标签页?如果它们是某网页页面里的链接.没有了你带尾巴的朋友,你现在该如何 <em>click</em> 这些链接?
 </p>
 
 <p>
-    The answer is <t>hints</t>. Activating hints displays a number next to
-    every link (or other element, depending on the mode) &dactyl.appName; can
-    find. To act on the element (e.g., follow or save a link), simply type
-    the number corresponding to the hint.
+    问题的答案是 <t>hints</t>.激活 hints 将在每个 &dactyl.appName; 能找到的链接(或其他页面元素,取决于模式)旁显示一个数字.要操作某元素(比如,访问或保存链接),键入相应 hint 的数字即可.
 </p>
 
 <p>
-    For text links, there's an additional shortcut; you can type some text
-    contained in the link and &dactyl.appName; will search all the links it can find and
-    only hint the matching links, further narrowing down the list. If the text you
-    type uniquely identifies any given link, &dactyl.appName; will follow that link
-    immediately without any further user input.
+    对于文本链接,有另外的快捷方式,你可以直接键入链接中包含的文本,然后 &dactyl.appName; 会搜索所有能找到的链接,只 hint 出符合的链接,进一步缩小范围.而假如你键入的文本可以锁定唯一的给定链接, &dactyl.appName; 会直接访问该链接,无需其他多余输入.
 </p>
 
 <p>
-    Whichever way you choose to indicate your target link, once &dactyl.appName; has
-    highlighted the link you want, simply hit <k name="CR" link="false"/> to open it.
+    无论你用哪种办法定位你的目标链接,一旦 &dactyl.appName; 高亮显示你所要的链接,简单地按下 <k name="CR" link="false"/> 就可以打开它.
 </p>
 
 <p>
-    To activate Hints mode, press either <k>f</k> or <k>F</k>. The lower-case
-    <k>f</k> will open the resulting link in the current tab, while the
-    upper-case <k>F</k> will open it in a new tab.
+    要激活 Hints 模式,按 <k>f</k> 或 <k>F</k> 键.小写的 <k>f</k> 将在当前标签页中打开目标链接,大写的 <k>F</k> 则在新标签中打开目标链接.
 </p>
 
 <p>
-    Extended hint modes, started by <k>;</k> or <k>g;</k>, provide a richer way
-    to interact with various elements, not limited to following links.
+    扩展 hint 模式,由 <k>;</k> 或 <k>g;</k> 起头,提供了各丰富的方法,可以与多种元素交互,而不仅限于可访问的链接.
 </p>
 
 <p>
-    To test it, try this link: <link topic="&dactyl.apphome;">&dactyl.appName; Homepage</link>.
-    Activate Hints mode with <k>f</k> or <k>F</k> to highlight all currently
-    visible links. Then start typing the text of the link. The link should be
-    uniquely identified soon, and &dactyl.appName; will open it. Once you're
-    done, remember to use <k>H</k> (<em>History Back</em>) or <k>d</k>
-    (<em>Delete Buffer</em>) to return here, depending on which key you used to
-    activate Hints mode.
+    试验下这个链接: <link topic="&dactyl.apphome;">&dactyl.appName; Homepage</link>.使用 <k>f</k> 或 <k>F</k> 激活 Hints 模式,高亮显示当前所有可见链接.然后键入链接文本.链接可以很快地唯一定位出来,然后 &dactyl.appName; 打开它.一旦你完成操作,记得使用 <k>H</k> (<em>后退历史记录</em>) 又或者 <k>d</k> (<em>删除缓冲区</em>) 返回这儿,至于用哪个键来返回取决于你用哪个键激活的 Hints 模式.
 </p>
 
-<h2 tag="saving-customization">Saving for posterity—<tt>pentadactylrc</tt></h2>
+<h2 tag="saving-customization">保存配置以后使用—<tt>pentadactylrc</tt></h2>
 
 <p>
-    Once you get &dactyl.appName; set up with your desired options, maps, and commands,
-    you'll probably want them to be available the next time you open &dactyl.appName;.
-    Continuing the Vim theme, this is done with a <tt><t>pentadactylrc</t></tt> file.
+    一旦你依你想要的选项、映射与命令设置好 &dactyl.appName;,你可以希望在下次打开 &dactyl.appName; 时它们仍然还在.仍依 Vim 的风格,你可以使用 <tt><t>pentadactylrc</t></tt> 文件保存. 
 </p>
 
 <p>
-    To save your current settings and allow them to be loaded automatically
-    next time you start &dactyl.appName;, issue the <ex>:mkp</ex> command.
+    为了保存你当前设置,允许它们在你下次启动 &dactyl.appName; 时自动加载,使用 <ex>:mkp</ex> 命令.
 </p>
 
 <p>
-    This will create the file <em>$HOME/.pentadactylrc</em> containing your settings.
-    It is a simple text file, just like a vimrc file and can be easily
-    edited to suit your preferences.
+    这会创建一个 <em>$HOME/.pentadactylrc</em> 文件,包含你的设置内容.它只是个简单的文本,就像 vimrc 文件,你可以轻易地编辑,使它更合你的喜好. 
 </p>
 
-<h2 tag="quitting-without-menus">Find the exit nearest you</h2>
+<h2 tag="quitting-without-menus">找出最近的出口</h2>
 
 <p>
-    &dactyl.appName; supports all of Vim's classic methods of exiting.
+    &dactyl.appName; 支持 vim 的所有经典退出方式. 
 </p>
 
 <dl>
     <dt><ex>:xall</ex></dt>
     <dd>
-        quit and save the current browsing session for next time; the default
+	退出,并为下次启动保存当前浏览会话,预设值
     </dd>
     <dt><ex>:exit</ex></dt>
     <dd>
-        quit <em>without</em> saving the session
+	退出,<em>不</em>保存会话
     </dd>
     <dt><k>ZZ</k></dt>
     <dd>
-        Normal mode mapping equivalent to <ex>:xall</ex>
+	正常模式的映射,相当于 <ex>:xall</ex>
     </dd>
     <dt><k>ZQ</k></dt>
     <dd>
-        Normal mode mapping equivalent to <ex>:exit</ex>
+        正常模式的映射,相当于 <ex>:exit</ex>
     </dd>
 </dl>
 
-<h2 tag="whither-&dactyl.host;">Where did &dactyl.host; go?</h2>
+<h2 tag="whither-&dactyl.host;">&dactyl.host; 哪去了</h2>
 
 <p>
-    You might feel pretty disoriented now. Don't worry. This is still
-    &dactyl.host; underneath. Here are some ways &dactyl.appName; allows
-    &dactyl.host; to shine through (see the <ex>:help</ex> for these commands
-    and mappings for more information on how to make the best use of them):
+    你现在可能觉得相当迷茫.不要担心.这仍然是在 &dactyl.host; 下.这里是一些 &dactyl.appName; 让 &dactyl.host; 重现光亮的方法(使用 <ex>:help</ex> 命令查看更多关于这些命令与映射的信息,了解如何更好使用它们):
 </p>
 
 <dl>
     <dt><ex>:dialog</ex></dt>
     <dd>
-        To access some of &dactyl.host;'s many dialog windows, you can use the
-        <ex>:dialog</ex> command. See <ex>:help :dialog</ex>.
+	要访问 &dactyl.host; 的许多对话框窗口,你可以使用 <ex>:dialog</ex> 命令.请看 <ex>:help :dialog</ex>.
     </dd>
     <dt><ex>:bmarks</ex></dt>
     <dd>
-        &dactyl.appName; provides a new interface to bookmarks, but they're still your
-        standard &dactyl.host; bookmarks under the hood. <ex>:bmark</ex> will add a new
-        bookmark, while <ex>:bmarks</ex> will list the bookmarks currently defined.
+	&dactyl.appName; 提供了一个全新的书签界面,但本质上它们仍是你的标准 &dactyl.host; 书签. <ex>:bmark</ex> 会添加一个新书签, <ex>:bmarks</ex> 会列出当前所有的书签.
     </dd>
     <dt><ex>:history</ex></dt>
     <dd>
-        It's exactly what it sounds like. This command will display a colorized,
-        scrollable and clickable list of the locations in &dactyl.appName;'s history.
+	正如其意思所表达的,这个命令会展示一个上色的、可滚动的并且可点击的位置列表,表示历史记录.
     </dd>
     <dt><ex>:emenu</ex></dt>
     <dd>
-        Access the &dactyl.host; menus through the &dactyl.appName; command line.
+	通过 &dactyl.appName; 命令行访问 &dactyl.host; 命令.
     </dd>
 </dl>
 
 <p>
-    Feel free to explore at this point. If you get hopelessly lost, just type
-    <ex>:help<k name="CR"/></ex> and click the <em>Quick-start tutorial</em>
-    link to return here.
+    现在请随意尝试.如果你无望地不知所处,请键入 <ex>:help<k name="CR"/></ex> 然后单击 <em>快速入门教程</em>链接返回这儿.
 </p>
 
 <!-- TODO: other sections? -->
 
-<h2 tag="removal">Get me out of here!</h2>
+<h2 tag="removal">放我出去吧!</h2>
 
 <p>
-    If you've given it a fair shot and determined that &dactyl.appName; is not
-    for you after all, you might want to disable it.
+    假如你给了 &dactyl.appName; 一个公平的机会后仍觉得它并不适合你,你可能想要禁用它.
 </p>
 
 <p>
-    The &dactyl.appName; way to do this is with the command <ex>:addons</ex>,
-    which displays a list of all installed extensions. You can use hints or
-    mouse to click on <em>Off</em> or <em>Del</em> to disable or remove
-    &dactyl.appName;, respectively.
+    &dactyl.appName; 的禁用方法是使用命令 <ex>:addons</ex>,命令会列出所有安装的扩展.你可以使用 hints 或者鼠标点击 <em>Off</em> 或 <em>Del</em>,相应地会禁用或移除 &dactyl.appName;.
 </p>
 
 <p>
-    Alternatively, you can do this the old-fashioned way: re-enable the menubar,
-    as above, with <se opt="go" op="+=">m</se>, and select <em>Add-ons</em>
-    from the <em>Tools</em> menu. You can also use <ex>:dialog addons</ex> to
-    get to the interface.
+    或者,你也可以使用老式的办法:如上面所提及的,使用 <se opt="go" op="+=">m</se> 重启菜单栏,然后选择<em>工具</em>中的<em>扩展</em>.你也可以使用 <ex>:dialog addons</ex> 访问该界面.
 </p>
 
-<h2 tag="support">I'm interested… but lost!</h2>
+<h2 tag="support">我也有兴趣...可是迷失了!</h2>
 
 <p>
-    &dactyl.appName; has an energetic and growing user base. If you've run into
-    a problem that you can't seem to solve with &dactyl.appName;, or if you
-    think you might have found a bug, please let us know! There is support
-    available on the <link topic="&dactyl.list.href;">mailing list</link>
-    (mirrored on <link topic="http://dir.gmane.org/gmane.comp.mozilla.firefox.pentadactyl">Gmane</link>)
-    or in the <link topic="irc://irc.oftc.net/pentadactyl">#pentadactyl</link> IRC
-    channel on <link topic="http://oftc.net/">OFTC</link>. See also
-    <t>contact</t>.
+    &dactyl.appName; 有一个充满活力的用户基础,并且在不断增长.如果你遇到一个因 &dactyl.appName; 引起的问题,又或者你觉得你可能找到一个 bug,请让我们知道.不论是<link topic="&dactyl.list.href;">邮件列表</link>(镜像在 <link topic="http://dir.gmane.org/gmane.comp.mozilla.firefox.pentaactyl">Gmane</link> 上)还是 <link topic="http://oftc.net/">OFTC</link> 上的 <link topic="irc://irc.oftc.net/pentadactyl">#pentadactyl</link> IRC 频道,你都可以找到帮助.另外还有 <t>conact</t>.
 </p>
 
 <p>
-    If you have any feature requests or (even better) offers to help, we'd love to
-    hear from you as well. Developers work on &dactyl.appName; whenever possible, but we
-    are neither infinite nor omnipotent; please bear with us. If you can't wait for
-    us to get around to it, rest assured patches are welcome! See the
-    <t>developer</t> page for more information.
+    如果你有任何特性要求或(更受欢迎的)想要提供帮助,我们也非常乐于收到你的信息.开发者们在任何可能时候进行 &dactyl.appName; 的工作,但我们既不无数也不万能,请多包涵.如果你等不及我们抽时间出来,请放心,我们欢迎打补丁.请查看 <t>developer</t> 页面,那儿有更多信息.
 </p>
 
 </document>
