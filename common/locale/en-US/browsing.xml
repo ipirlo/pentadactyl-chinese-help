@@ -5,14 +5,14 @@
 
 <document
     name="browsing"
-    title="&dactyl.appName; Browsing"
+    title="&dactyl.appName; 浏览"
     xmlns="&xmlns.dactyl;"
     xmlns:html="&xmlns.html;">
 
-<h1 tag="surfing browsing">Browsing</h1>
+<h1 tag="surfing browsing">浏览</h1>
 <toc start="2"/>
 
-<h2 tag="opening">Opening web pages</h2>
+<h2 tag="opening">打开网页</h2>
 
 <item>
     <tags>o :o :open</tags>
@@ -25,10 +25,12 @@
             separated with <o>urlseparator</o>, in which case the
             first URL is opened in the current tab and the rest are
             opened in new background tabs.
+	    在当前标签页打开一个 URL 或在当前及背景标签页中打开多个 URL。多个 URL 可用 <o>urlseparator</o> 隔开，第一个 URL 在当前标签页打开，其余隔开的在新背景标签页中打开。
         </p>
 
         <p>
             Each URL may be one of the following:
+	    其中 URL 可以是以下这些种：
         </p>
 
         <ol>
@@ -36,11 +38,13 @@
                 A local filename, if it begins with <em>/</em>,
                 <em>./</em>, or <em>~/</em> and the specified file
                 exists.
+		本地文件名称，如果以 <em>/</em>，<em>./</em>,或 <em>~/</em> 起头并且文件存在。
             </li>
             <li>
                 <p>
                     A search or bookmark keyword, or a search engine
                     name, followed by search arguments.
+		    搜索关键词或书签关键词，又或者搜索引擎名称，其后跟着搜索词。
                 </p>
                 <example><ex>:open wikipedia Linus Torvalds</ex></example>
                 <p>
@@ -49,6 +53,7 @@
                     keywords may be added by right clicking any
                     search box and selecting <str>Add a Keyword for
                     this Search</str>.
+		    搜索引擎可以通过 <ex>:dialog searchengines</ex> 编辑，搜索关键字可以通过右击任一搜索框然后选择 <str>Add a keyword for this Search</str> 添加。
                 </p>
             </li>
             <li>
@@ -56,12 +61,14 @@
                     Any search string which does not look like a URL or
                     hostname, which will be passed to the default
                     search engine (see <o>defsearch</o>).
+		    任何看起来不像是 URL 或域名的搜索字符串将传递给预设的搜索引擎(请看 <o>defsearch</o>)。
                 </p>
                 <example><ex>:open Linus Torvalds</ex></example>
            </li>
            <li>
                Any other value is passed directly to &dactyl.host; and
                must be a valid URL or hostname.
+	       任何其他可以直接传递给 &dactyl.host; 的值，必须是有效的 URL 或域名。
            </li>
         </ol>
 
@@ -69,6 +76,7 @@
             <ex>:open</ex> provides powerful URL completion from
             several possible sources, which can be adjusted via the
             <o>complete</o> option.
+	    <ex>:open</ex> 提供了强大的 URL 补齐，可以从多个可能的源选择，源可以通过 <o>complete</o> 选项来调整。
         </p>
     </description>
 </item>
@@ -82,6 +90,7 @@
             Like <ex>:open</ex>, but all arguments are opened in new
             tabs. The first new tab is activated if <o>activate</o>
             contains <str>tabopen</str> or <oa>!</oa> is provided.
+	    类似于 <ex>:open</ex>，只不过所有的参数是在新标签页中打开。如果 <o>active</o> 选项中包括了 <str>tabopen</str> 又或者命令追加了 <oa>!</oa>，则第一个新标签页被置为当前标签页。
         </p>
     </description>
 </item>
@@ -92,6 +101,7 @@
     <description short="true">
         <p>
             Open an <ex>:open</ex> prompt followed by the current URL.
+	    打开 <ex>:open</ex> 命令提示，后面跟的是当前页面 URL。
         </p>
     </description>
 </item>
@@ -102,6 +112,7 @@
     <description short="true">
         <p>
             Open a <ex>:tabopen</ex> prompt followed by the current URL.
+	    打开 <ex>:tabopen</ex> 命令提示，后面跟的是当前页面 URL。
         </p>
     </description>
 </item>
@@ -110,7 +121,7 @@
     <tags>s</tags>
     <spec>s</spec>
     <description short="true">
-        <p>Open a search prompt.</p>
+        <p>打开搜索提示。Open a search prompt.</p>
     </description>
 </item>
 
@@ -118,7 +129,7 @@
     <tags>S</tags>
     <spec>S</spec>
     <description short="true">
-        <p>Open a search prompt for a new tab.</p>
+        <p>打开搜索提示，结果将在新标签页中呈现。Open a search prompt for a new tab.</p>
     </description>
 </item>
 
@@ -130,6 +141,7 @@
             Duplicates current tab <oa>count</oa> times. The first
             new tab is activated if <o>activate</o> contains
             <str>tabopen</str> or <oa>!</oa> is provided.
+	    复制当前标签页 <oa>count</oa> 次。如果 <o>activate</o> 选项中包括了 <str>tabopen</str> 或者命令后追加了 <oa>!</oa>，则第一个新标签页置为当前标签页。
         </p>
     </description>
 </item>
@@ -142,6 +154,7 @@
         <p>
             Like <ex>:tabopen</ex>, but all arguments are opened in
             a single new window.
+	    类似于 <ex>:tabopen</ex>，不过所有的参数是在一个新窗口中打开。
         </p>
     </description>
 </item>
@@ -152,6 +165,7 @@
     <description short="true">
         <p>
             Open a <ex>:winopen</ex> prompt followed by the current URL.
+	    打开 <ex>:winopen</ex> 命令提示，后面跟的是当前的 URL。
         </p>
     </description>
 </item>
