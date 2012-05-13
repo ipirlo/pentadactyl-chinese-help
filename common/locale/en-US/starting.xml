@@ -15,15 +15,10 @@
 <h2 tag="startup-options">命令行选项</h2>
 
 <p>
-    Command-line options can be passed to &dactyl.appName; via the <em>-&dactyl.name;</em> &dactyl.host;
-    option. These are passed as single string argument.
-    E.g., <tt>&dactyl.hostbin; -&dactyl.name; <str><t>++cmd</t> 'set exrc' <t>+u</t> 'tempRcFile' <t>++noplugin</t></str></tt>
     通过 <em>-&dactyl.name;</em> &dactyl.host; 参数可以将命令行选项传递给 &dactyl.appName;。它们是作为单一字符串参数传递的。比如， <tt>&dactyl.hostbin; -&dactyl.name; <str><t>++cmd</t> 'set exrc' <t>+u</t> 'tempRcFile' <t>++noplugin</t></str></tt> 
 </p>
 
 <p>
-    The <em>-&dactyl.name;-remote</em> command-line option can be used to
-    execute a single Ex command in an already running Pentadactyl instance.
     命令行选项 <em>-&dactyl.name;-remote</em> 可用于在运行中的 Pentadactyl 实例里执行单个 Ex 命令。
 </p>
 
@@ -33,8 +28,6 @@
     <spec>+c <a>command</a></spec>
     <description>
         <p>
-            Execute a single Ex command after all initialization has been performed. See
-            <t>initialization</t>.
 	    所有初始化完成后执行一个 Ex 命令。请看 <t>initialization</t>。
         </p>
 
@@ -48,8 +41,6 @@
     <spec>++cmd <a>command</a></spec>
     <description>
         <p>
-            Execute a single Ex command before any initialization has been performed. See
-            <t>initialization</t>.
 	    在执行任何初始化动作前执行一个 Ex 命令。请看 <t>initialization</t>。
         </p>
 
@@ -63,10 +54,6 @@
     <spec>+u <a>rcfile</a></spec>
     <description>
         <p>
-            The file <a>rcfile</a> is used for user initialization commands. If <a>rcfile</a> is
-            <str>NORC</str> then no startup initialization is performed except for the loading of
-            plugins, i.e., steps 1. and 2. in <t>initialization</t> are skipped. If <a>rcfile</a>
-            is <str>NONE</str> then plugin loading is also skipped.
 	    <a>rcfile</a> 用于用户初始化命令。如果 <a>rcfile</a> 的值是 <str>NORC</str>，那么除了加载插件外，任何其他的启动初始化都不执行，也就是说 <t>initialization</t> 中的第1、2步骤被跳过。而如果 <a>rcfile</a> 值为 <str>NONE</str>，则连插件也不加载。
         </p>
     </description>
@@ -87,8 +74,6 @@
     <spec>+purgecaches</spec>
     <description>
         <p>
-            Purges &dactyl.appName; caches at startup. May occasionally be
-            necessary after making local changes to the source tree.
 	    在启动时清除 &dactyl.appName; 缓存。有时对源树 (source tree) 做了本地更改后会需要。
         </p>
     </description>
@@ -101,9 +86,6 @@
 <ol>
     <li>
         <p>
-            &dactyl.appName; first searches for user initialization commands in
-            the following locations. The first of these to be found is executed,
-            after which no further locations are searched.
 	    首先，&dactyl.appName; 在以下位置搜索用户初始化命令。第一个检索到的将被执行，稍后位置将放弃，不再搜索。
         </p>
 
@@ -111,39 +93,27 @@
             <li tag="$&dactyl.idName;_INIT">
                 <em>$&dactyl.idName;_INIT</em>
                 <strut/>
-                May contain a single Ex command (e.g., "<ex>:source <a>file</a></ex>").
 		可能包含一个 Ex 命令 (比如 "<ex>:source <a>file</a></ex>")。
             </li>
             <li tag="$MY_&dactyl.idName;RC">
                 <em>~/_&dactyl.name;rc</em>
                 <strut/>
-                Windows only. If this file exists, its contents
-                are executed and <tt>$MY_&dactyl.idName;RC</tt> set to its path.
 		仅限 Windows 系统下。如果这个文件存在，执行它的内容，并且将 <tt>$MY_&dactyl.idName;RC</tt> 值设置为其路径。
             </li>
             <li tag="&dactyl.name;rc ">
                 <em>~/.&dactyl.name;rc</em>
                 <strut/>
-                If this file exists, its contents are executed.
 		如果这个文件存在，执行它的内容。
             </li>
         </ol>
     </li>
     <li>
         <p>
-            If <o>exrc</o> is set and the <t>+u</t> command-line option was not
-            specified, then any RC file in the current directory is also
-            sourced.
 	    如果设置了 <o>exrc</o>，并且 <t>+u</t> 命令行选项未曾指定，则当前目前下的任何 RC 文件也被导入。
         </p>
     </li>
     <li>
         <p>
-            All directories in <o>runtimepath</o> are searched for a
-            ‘plugins’ subdirectory and all yet unloaded plugins are loaded.
-            For each plugins directory, all <tt>*.{js,&dactyl.fileExt;}</tt>
-            files (including those in further subdirectories) are sourced
-            alphabetically. No plugins will be sourced if,
 	    所有 <o>runtimepath</o> 值中的目录将被检索，检查是否有一个 'plugins' 子目录，如果有，所有被卸载的插件将被载入。对于每个插件目录，则所有的 <tt>*.{js,&dactyl.fileExt;}</tt> 文件（包括更深层次的子目录）将按字母顺序导入。如果存在以下条件则不载入任何插件，
 	</p>
 	<ul>
@@ -153,25 +123,18 @@
         </ul>
 
         <p>
-            Any plugin which was already loaded (e.g., by an earlier
-            invocation of the <ex>:loadplugins</ex> command) will be skipped.
 	    任何已经载入的插件（比如，早时通过 <ex>:loadplugins</ex> 命令调用）将被略过。
         </p>
     </li>
 </ol>
 
 <p>
-    The user's home directory is determined as follows:
     用户的主目录位置按下面规则决定：
 </p>
 
 <ul>
     <li>在 Unix 和 Mac 上，使用环境变量 <tt>$HOME</tt>。</li>
     <li>
-        On Windows, &dactyl.appName; checks for the existence of
-        <tt>%HOME%</tt>, then <tt>%USERPROFILE%</tt>, and then
-        <tt>%HOMEDRIVE%%HOMEPATH%</tt>. It uses the first one it
-        finds.
 	在 Windows 上，&dactyl.appName; 检查 <tt>%HOME%</tt> 是否存在，然后是 <tt>%USERPROFILE%</tt>，最后 <tt>%HOMEDRIVE%%HOMEPATH%</tt>，使用它第一个找到的值。
     </li>
 </ul>
@@ -183,16 +146,10 @@
     <spec>:mkp<oa>entadactylrc</oa><oa>!</oa> <oa>file</oa></spec>
     <description>
         <p>
-            Write current key mappings and changed options to <oa>file</oa>. If no
-            <oa>file</oa> is specified then <em>~/.&dactyl.name;rc</em> is written unless this file
-            already exists. The special version <ex>:mk&dactyl.name;rc!</ex> will overwrite
-            <oa>file</oa> if it exists.
 	    将当前键映射与改变的选项写入 <oa>file</oa>。如果没有指定 <oa>file</oa> 则写入 <em>~/.&dactyl.name;rc</em>，除非该文件已经存在。如果已经存在，也可以使用特别版本的 <ex>:mk&dactyl.name;rc!</ex> 覆盖。
         </p>
 
         <warning>
-            This behavior differs differs from that of Vim, which defaults to
-            writing the file in the current directory.
 	    这个表现得与 Vim 是不一样的， Vim 是默认在当前目录定该文件。
         </warning>
     </description>
@@ -205,23 +162,14 @@
     <spec>:reh<oa>ash</oa> <oa>arg</oa> …</spec>
     <description>
         <p>
-            Reload the &dactyl.appName; add-on, including all code, plugins,
-            and configuration. For users running directly from the development
-            repository, this is a good way to update to the latest version or
-            to test your changes.
 	    重载 &dactyl.appName; 附加组件，包括所有的代码，插件与配置。对于直接从开发源运行的用户来说，这是一个很好的更新到最新版本的办法，又或者测试你的更改。
         </p>
 
         <p>
-            Any arguments supplied are parsed as command-line arguments as
-            specified in <t>startup-options</t>.
 	    所有提供的参数都将作为命令行参数传递，如 <t>startup-options</t> 中所指明的那样。
         </p>
 
         <warning>
-            Not all plugins are designed to cleanly un-apply during a rehash.
-            While official plugins are safe, beware of possible instability
-            if you rehash while running third-party plugins.
 	    并非所有的插件都设计成 rehash 时彻底地取消掉之前的应用内容。虽然官方的插件是安全的，但还是要注意，在你运行第三方插件时，rehash 可能带来的不稳定性。
         </warning>
     </description>
@@ -234,8 +182,6 @@
         <p>强制 &dactyl.host; 重启。在安装扩展时能用到。</p>
 
         <p>
-            Any arguments supplied are parsed as command-line arguments as
-            specified in <t>startup-options</t>.
 	    所有提供的参数都将作为命令行参数传递，如 <t>startup-options</t> 中所指明的那样。
         </p>
     </description>
