@@ -7,11 +7,13 @@
 
 try {
 
-Components.utils.import("resource://dactyl/bootstrap.jsm");
 defineModule("addons", {
     exports: ["AddonManager", "Addons", "Addon", "addons"],
-    require: ["services"]
-}, this);
+    require: ["services", "util"]
+});
+
+this.lazyRequire("completion", ["completion"]);
+lazyRequire("template", ["template"]);
 
 var callResult = function callResult(method) {
     let args = Array.slice(arguments, 1);
@@ -83,14 +85,14 @@ var actions = {
         name: "exte[nable]",
         description: "Enable an extension",
         action: function (addon) { addon.userDisabled = false; },
-        filter: function ({ item }) item.userDisabled,
+        filter: function (addon) addon.userDisabled,
         perm: "enable"
     },
     disable: {
         name: "extd[isable]",
         description: "Disable an extension",
         action: function (addon) { addon.userDisabled = true; },
-        filter: function ({ item }) !item.userDisabled,
+        filter: function (addon) !addon.userDisabled,
         perm: "disable"
     },
     options: {
@@ -103,7 +105,7 @@ var actions = {
             else
                 this.dactyl.open(addon.optionsURL, { from: "extoptions" });
         },
-        filter: function ({ item }) item.isActive && item.optionsURL
+        filter: function (addon) addon.isActive && addon.optionsURL
     },
     rehash: {
         name: "extr[ehash]",
@@ -117,8 +119,8 @@ var actions = {
             });
         },
         get filter() {
-            return function ({ item }) !item.userDisabled &&
-                !(item.operationsRequiringRestart & (AddonManager.OP_NEEDS_RESTART_ENABLE | AddonManager.OP_NEEDS_RESTART_DISABLE))
+            return function (addon) !addon.userDisabled &&
+                !(addon.operationsRequiringRestart & (AddonManager.OP_NEEDS_RESTART_ENABLE | AddonManager.OP_NEEDS_RESTART_DISABLE))
         },
         perm: "disable"
     },
@@ -170,7 +172,7 @@ var Addon = Class("Addon", {
         let action = actions[cmd];
         if ("perm" in action && !(this.permissions & AddonManager["PERM_CAN_" + action.perm.toUpperCase()]))
             return false;
-        if ("filter" in action && !action.filter({ item: this }))
+        if ("filter" in action && !action.filter(this))
             return false;
         return true;
     },
@@ -412,7 +414,7 @@ var Addons = Module("addons", {
         // TODO: handle extension dependencies
         values(actions).forEach(function (command) {
             let perm = command.perm && AddonManager["PERM_CAN_" + command.perm.toUpperCase()];
-            function ok(addon) !perm || addon.permissions & perm;
+            function ok(addon) (!perm || addon.permissions & perm) && (!command.filter || command.filter(addon));
 
             commands.add(Array.concat(command.name),
                 command.description,
@@ -430,6 +432,7 @@ var Addons = Module("addons", {
                             dactyl.assert(list.some(ok), _("error.invalidOperation"));
                             list = list.filter(ok);
                         }
+                        dactyl.assert(list.every(ok));
                         if (command.actions)
                             command.actions(list, this.modules);
                         else
@@ -441,8 +444,6 @@ var Addons = Module("addons", {
                     completer: function (context, args) {
                         completion.addon(context, args["-types"]);
                         context.filters.push(function ({ item }) ok(item));
-                        if (command.filter)
-                            context.filters.push(command.filter);
                     },
                     literal: 0,
                     options: [
@@ -497,7 +498,7 @@ var Addons = Module("addons", {
 });
 
 if (!services.has("extensionManager"))
-    Components.utils.import("resource://gre/modules/AddonManager.jsm");
+    Components.utils.import("resource://gre/modules/AddonManager.jsm", this);
 else
     var AddonManager = {
         PERM_CAN_UNINSTALL: 1,

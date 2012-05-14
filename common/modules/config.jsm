@@ -7,18 +7,18 @@
 /* use strict */
 
 let global = this;
-Components.utils.import("resource://dactyl/bootstrap.jsm");
 defineModule("config", {
     exports: ["ConfigBase", "Config", "config"],
     require: ["dom", "io", "protocol", "services", "util", "template"]
-}, this);
+});
 
-this.lazyRequire("addons", ["AddonManager"]);
-this.lazyRequire("cache", ["cache"]);
-this.lazyRequire("highlight", ["highlight"]);
-this.lazyRequire("messages", ["_"]);
-this.lazyRequire("prefs", ["localPrefs", "prefs"]);
-this.lazyRequire("storage", ["storage", "File"]);
+lazyRequire("addons", ["AddonManager"]);
+lazyRequire("cache", ["cache"]);
+lazyRequire("highlight", ["highlight"]);
+lazyRequire("messages", ["_"]);
+lazyRequire("prefs", ["localPrefs", "prefs"]);
+lazyRequire("storage", ["storage", "File"]);
+lazyRequire("styles", ["Styles"]);
 
 function AboutHandler() {}
 AboutHandler.prototype = {
@@ -403,11 +403,11 @@ var ConfigBase = Class("ConfigBase", {
 
     dtdDactyl: memoize({
         get name() config.name,
-        get home() "http://dactyl.sourceforge.net/",
+        get home() "http://5digits.org/",
         get apphome() this.home + this.name,
         code: "http://code.google.com/p/dactyl/",
         get issues() this.home + "bug/" + this.name,
-        get plugins() "http://dactyl.sf.net/" + this.name + "/plugins",
+        get plugins() "http://5digits.org/" + this.name + "/plugins",
         get faq() this.home + this.name + "/faq",
 
         "list.mailto": Class.Memoize(function () config.name + "@googlegroups.com"),

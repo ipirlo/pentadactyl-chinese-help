@@ -6,10 +6,12 @@
 // given in the LICENSE.txt file included with this file.
 /* use strict */
 
-Components.utils.import("resource://dactyl/bootstrap.jsm");
 defineModule("completion", {
     exports: ["CompletionContext", "Completion", "completion"]
 }, this);
+
+lazyRequire("messages", ["_", "messages"]);
+lazyRequire("template", ["template"]);
 
 /**
  * Creates a new completion context.
@@ -657,6 +659,7 @@ var CompletionContext = Class("CompletionContext", {
                 }
                 catch (e) {
                     util.reportError(e);
+                    XML.ignoreWhitespace = XML.prettyPrinting = false;
                     cache[idx] = util.xmlToDom(
                         <div highlight="CompItem" style="white-space: nowrap">
                             <li highlight="CompResult">{this.text}&#xa0;</li>

@@ -4,18 +4,18 @@
 //
 // This work is licensed for reuse under an MIT license. Details are
 // given in the LICENSE.txt file included with this file.
-try {"use strict";
+// "use strict";
 
-Components.utils.import("resource://dactyl/bootstrap.jsm");
 defineModule("buffer", {
     exports: ["Buffer", "buffer"],
     require: ["prefs", "services", "util"]
-}, this);
+});
 
-this.lazyRequire("finder", ["RangeFind"]);
-this.lazyRequire("overlay", ["overlay"]);
-this.lazyRequire("storage", ["storage"]);
-this.lazyRequire("template", ["template"]);
+lazyRequire("bookmarkcache", ["bookmarkcache"]);
+lazyRequire("finder", ["RangeFind"]);
+lazyRequire("overlay", ["overlay"]);
+lazyRequire("storage", ["storage"]);
+lazyRequire("template", ["template"]);
 
 /**
  * A class to manage the primary web content buffer. The name comes
@@ -2280,12 +2280,12 @@ var Buffer = Module("Buffer", {
 
         options.add(["nextpattern"],
             "Patterns to use when guessing the next page in a document sequence",
-            "regexplist", UTF8(/'\bnext\b',^>$,^(>>|»)$,^(>|»),(>|»)$,'\bmore\b'/.source),
+            "regexplist", UTF8(/'^Next [>»]','^Next »','\bnext\b',^>$,^(>>|»)$,^(>|»),(>|»)$,'\bmore\b'/.source),
             { regexpFlags: "i" });
 
         options.add(["previouspattern"],
             "Patterns to use when guessing the previous page in a document sequence",
-            "regexplist", UTF8(/'\bprev|previous\b',^<$,^(<<|«)$,^(<|«),(<|«)$/.source),
+            "regexplist", UTF8(/'[<«] Prev$','« Prev$','\bprev(ious)\b',^<$,^(<<|«)$,^(<|«),(<|«)$/.source),
             { regexpFlags: "i" });
 
         options.add(["pageinfo", "pa"],
@@ -2529,7 +2529,7 @@ Buffer.addPageInfoSection("s", "Security", function (verbose) {
     }
 });
 
-} catch(e){ if (!e.stack) e = Error(e); dump(e.fileName+":"+e.lineNumber+": "+e+"\n" + e.stack); }
+// catch(e){ if (!e.stack) e = Error(e); dump(e.fileName+":"+e.lineNumber+": "+e+"\n" + e.stack); }
 
 endModule();
 
