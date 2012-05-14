@@ -16,3 +16,4 @@
 2. help/tutorial 翻译近三分之一(2012.4.29)
 3. help/tutorial 翻译完成(2012.4.30)
 4. help/starting finished (2012.5.4) 
+5. browsing.xml finished (2012.5.14)
