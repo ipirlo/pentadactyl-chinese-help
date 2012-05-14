@@ -20,62 +20,38 @@
     <spec>o</spec>
     <description>
         <p>
-            Open a single URL in the current tab, or multiple URLs
-            in the current tab and background tabs. URLs may be
-            separated with <o>urlseparator</o>, in which case the
-            first URL is opened in the current tab and the rest are
-            opened in new background tabs.
-	    在当前标签页打开一个 URL 或在当前及背景标签页中打开多个 URL。多个 URL 可用 <o>urlseparator</o> 隔开，第一个 URL 在当前标签页打开，其余隔开的在新背景标签页中打开。
+	    在当前标签页打开一个 URL 或在当前及背景标签页中打开多个 URL。多个 URL 可用 <o>urlseparator</o> 隔开，其中第一个 URL 在当前标签页打开，其余的在新背景标签页中打开。
         </p>
 
         <p>
-            Each URL may be one of the following:
 	    其中 URL 可以是以下这些种：
         </p>
 
         <ol>
             <li>
-                A local filename, if it begins with <em>/</em>,
-                <em>./</em>, or <em>~/</em> and the specified file
-                exists.
 		本地文件名称，如果以 <em>/</em>，<em>./</em>,或 <em>~/</em> 起头并且文件存在。
             </li>
             <li>
                 <p>
-                    A search or bookmark keyword, or a search engine
-                    name, followed by search arguments.
 		    搜索关键词或书签关键词，又或者搜索引擎名称，其后跟着搜索词。
                 </p>
                 <example><ex>:open wikipedia Linus Torvalds</ex></example>
                 <p>
-                    Search engines can be edited via
-                    <ex>:dialog searchengines</ex> and search
-                    keywords may be added by right clicking any
-                    search box and selecting <str>Add a Keyword for
-                    this Search</str>.
 		    搜索引擎可以通过 <ex>:dialog searchengines</ex> 编辑，搜索关键字可以通过右击任一搜索框然后选择 <str>Add a keyword for this Search</str> 添加。
                 </p>
             </li>
             <li>
                 <p>
-                    Any search string which does not look like a URL or
-                    hostname, which will be passed to the default
-                    search engine (see <o>defsearch</o>).
 		    任何看起来不像是 URL 或域名的搜索字符串将传递给预设的搜索引擎(请看 <o>defsearch</o>)。
                 </p>
                 <example><ex>:open Linus Torvalds</ex></example>
            </li>
            <li>
-               Any other value is passed directly to &dactyl.host; and
-               must be a valid URL or hostname.
 	       任何其他可以直接传递给 &dactyl.host; 的值，必须是有效的 URL 或域名。
            </li>
         </ol>
 
         <p>
-            <ex>:open</ex> provides powerful URL completion from
-            several possible sources, which can be adjusted via the
-            <o>complete</o> option.
 	    <ex>:open</ex> 提供了强大的 URL 补齐，可以从多个可能的源选择，源可以通过 <o>complete</o> 选项来调整。
         </p>
     </description>
@@ -87,9 +63,6 @@
     <spec>t</spec>
     <description>
         <p>
-            Like <ex>:open</ex>, but all arguments are opened in new
-            tabs. The first new tab is activated if <o>activate</o>
-            contains <str>tabopen</str> or <oa>!</oa> is provided.
 	    类似于 <ex>:open</ex>，只不过所有的参数是在新标签页中打开。如果 <o>active</o> 选项中包括了 <str>tabopen</str> 又或者命令追加了 <oa>!</oa>，则第一个新标签页被置为当前标签页。
         </p>
     </description>
@@ -100,7 +73,6 @@
     <spec>O</spec>
     <description short="true">
         <p>
-            Open an <ex>:open</ex> prompt followed by the current URL.
 	    打开 <ex>:open</ex> 命令提示，后面跟的是当前页面 URL。
         </p>
     </description>
@@ -111,7 +83,6 @@
     <spec>T</spec>
     <description short="true">
         <p>
-            Open a <ex>:tabopen</ex> prompt followed by the current URL.
 	    打开 <ex>:tabopen</ex> 命令提示，后面跟的是当前页面 URL。
         </p>
     </description>
@@ -129,7 +100,7 @@
     <tags>S</tags>
     <spec>S</spec>
     <description short="true">
-        <p>打开搜索提示，结果将在新标签页中呈现。Open a search prompt for a new tab.</p>
+        <p>打开搜索提示，结果将在新标签页中呈现。</p>
     </description>
 </item>
 
@@ -138,9 +109,6 @@
     <spec>:<oa>count</oa>tabdu<oa>plicate</oa><oa>!</oa></spec>
     <description>
         <p>
-            Duplicates current tab <oa>count</oa> times. The first
-            new tab is activated if <o>activate</o> contains
-            <str>tabopen</str> or <oa>!</oa> is provided.
 	    复制当前标签页 <oa>count</oa> 次。如果 <o>activate</o> 选项中包括了 <str>tabopen</str> 或者命令后追加了 <oa>!</oa>，则第一个新标签页置为当前标签页。
         </p>
     </description>
@@ -152,8 +120,6 @@
     <spec>w</spec>
     <description>
         <p>
-            Like <ex>:tabopen</ex>, but all arguments are opened in
-            a single new window.
 	    类似于 <ex>:tabopen</ex>，不过所有的参数是在一个新窗口中打开。
         </p>
     </description>
@@ -164,7 +130,6 @@
     <spec>W</spec>
     <description short="true">
         <p>
-            Open a <ex>:winopen</ex> prompt followed by the current URL.
 	    打开 <ex>:winopen</ex> 命令提示，后面跟的是当前的 URL。
         </p>
     </description>
@@ -176,10 +141,7 @@
     <spec>p</spec>
     <description>
         <p>
-            Open (put) a URL based on the current clipboard
-            contents, or, on X11 systems, the currently selected
-            text. All white space is stripped from the selection and
-            it is opened in the same manner as <ex>:open</ex>.
+	    基于当前剪切板内容打开一个 URL，又或者，在 X11 系统上，基于当前选择的文本。选择内容中的空白符都去掉，其打开方式类似于 <ex>:open</ex>。
         </p>
     </description>
 </item>
@@ -190,10 +152,7 @@
     <spec>P</spec>
     <description>
         <p>
-            Open (put) a URL based on the current clipboard contents
-            in a new buffer. Works like <k>p</k> but opens a new
-            tab. The new tab is activated if <o>activate</o>
-            contains <str>paste</str>.
+	    基于当前剪切板内容打开一个新的缓冲区。类似于 <k>p</k>，只是在新标签面中打开。如果 <o>activate</o> 中包含 <str>paste</str>，则新标签页置为当前。
         </p>
     </description>
 </item>
@@ -204,9 +163,7 @@
     <spec>gP</spec>
     <description>
         <p>
-            Open (put) a URL based on the current clipboard contents
-            in a new buffer. The new tab is activated if <o>activate</o>
-            does <em>not</em> contain <str>paste</str>.
+	    基于当前剪切板内容在新缓冲区打开一个 URL。如果 <o>activate</o> 选项中不包含 <str>paste</str>，是新打开的标签页置为当前。
         </p>
     </description>
 </item>
@@ -217,10 +174,7 @@
     <spec><oa>count</oa>&lt;C-x></spec>
     <description>
         <p>
-            Decrements the last number in URL by 1, or by
-            <oa>count</oa> if given. Negative numbers are not
-            supported as trailing numbers in URLs are often preceded
-            by hyphens.
+	    将 URL 中的最后一个数字减去 1，又或者减去 <oa>count</oa> 数值。因为在 URL 中 - 会被识别为连字符，所以数字不支持负数。
         </p>
     </description>
 </item>
@@ -231,13 +185,12 @@
     <spec><oa>count</oa>&lt;C-a></spec>
     <description>
         <p>
-            Increments the last number in URL by 1, or by
-            <oa>count</oa> if given.
+	    将 URL 中的最后一个数字加上 1,又或者增加 <oa>count</oa> 数值。
         </p>
     </description>
 </item>
 
-<h2 tag="history">History</h2>
+<h2 tag="history">历史记录</h2>
 
 <item>
     <tags><![CDATA[<C-o>]]></tags>
@@ -245,8 +198,8 @@
     <spec><oa>count</oa><![CDATA[<C-o>]]></spec>
     <description>
         <p>
-            Go to an older position in the jump list.
-            If <oa>count</oa> is specified, jump <oa>count</oa> positions backward.
+	    跳转到 jump list 中的上一个位置。
+	    如果明确 <oa>count</oa> 数字，则后退 <oa>count</oa> 次到之前的某个位置。
         </p>
     </description>
 </item>
@@ -257,8 +210,8 @@
     <spec><oa>count</oa><![CDATA[<C-i>]]></spec>
     <description>
         <p>
-            Go to a newer position in the jump list.
-            If <oa>count</oa> is specified, jump <oa>count</oa> positions forward.
+	    跳转到 jump list 中的下一个位置。
+	    如果明确 <oa>count</oa> 数字，则前进 <oa>count</oa> 次到之后的某个位置。
         </p>
     </description>
 </item>
@@ -269,9 +222,8 @@
     <spec>:ju<oa>mps</oa></spec>
     <description>
         <p>
-            Display the jump list.
-            The jump numbers shown are suitable as arguments to <k name="C-o"/>
-            or <k name="C-i"/>.
+	    显示 jump list。
+	    jump list 中显示的 jump 数字可用于配合 <k name="C-o"/> 或 <k name="C-i"/>。
         </p>
     </description>
 </item>
@@ -282,8 +234,7 @@
     <spec>[count]H</spec>
     <description>
         <p>
-            Go back in the browser history. If <oa>count</oa> is specified, go
-            back <oa>count</oa> pages.
+	    浏览器历史记录中后退。若明确 <oa>count</oa> 数字，则后退 <oa>count</oa> 次。
         </p>
     </description>
 </item>
@@ -294,8 +245,7 @@
     <spec><oa>count</oa>L</spec>
     <description>
         <p>
-            Go forward in the browser history. If <oa>count</oa> is specified,
-            go forward <oa>count</oa> pages.
+	    在浏览器历史记录中前进。若明确 <oa>count</oa> 数字，则前进 <oa>count</oa> 次。
         </p>
     </description>
 </item>
@@ -306,11 +256,10 @@
     <spec>:<oa>count</oa>ba<oa>ck</oa>!</spec>
     <description>
         <p>
-            Go back in the browser history. If <oa>count</oa> is specified, go
-            back <oa>count</oa> pages.
+	    在浏览器历史记录中后退。若明确 <oa>count</oa> 数字，则后退 <oa>count</oa> 次。
         </p>
         <p>
-            The special version <ex>:back!</ex> goes to the beginning of the browser history.
+	    <ex>:back!</ex> 命令则直达浏览器历史记录开始的地方。
         </p>
     </description>
 </item>
@@ -321,11 +270,10 @@
     <spec>:<oa>count</oa>fo<oa>rward</oa>!</spec>
     <description>
         <p>
-            Go forward in the browser history. If <oa>count</oa> is specified,
-            go forward <oa>count</oa> pages.
+	    在浏览器历史记录中前进。若明确 <oa>count</oa> 数字，则前进 <oa>count</oa> 次。
         </p>
         <p>
-            The special version <ex>:forward!</ex> goes to the end of the browser history.
+	    <ex>:forward!</ex> 则直达浏览器历史记录的最末一个。
         </p>
     </description>
 </item>
@@ -335,7 +283,7 @@
     <spec><oa>count</oa>[d</spec>
     <description>
         <p>
-            Go to the <oa>count</oa>th previous domain in the history stack.
+	    后退到历史记录前 <oa>count</oa> 个域名。
         </p>
     </description>
 </item>
@@ -345,7 +293,7 @@
     <spec><oa>count</oa>]d</spec>
     <description>
         <p>
-            Go to the <oa>count</oa>th next domain in the history stack.
+            前进到历史记录后 <oa>count</oa> 个域名。
         </p>
     </description>
 </item>
@@ -355,41 +303,35 @@
     <spec>:hist<oa>ory</oa><oa>!</oa> <oa>filter</oa></spec>
     <description>
         <p>
-            Show recently visited URLs. Opens the message window at the bottom of the screen
-            with all history items whose page titles or URLs match
-            <oa>filter</oa>.
+	    显示最近访问的 URLs。在屏幕底端打开消息窗口，显示所有标题或 URL 符合 <oa>filter</oa> 规则的历史记录页面。
         </p>
 
         <p>
-            The special version <ex>:history!</ex> works the same as
-            <ex>:history</ex> except that it opens all matching
-            pages in new tabs rather than listing them.
+	    <ex>:history!</ex> 命令的作用类似于 <ex>:history</ex>，只不过它是将所有符合规则的历史记录在新标签页中打开，而非仅仅列出它们。
         </p>
 
-        <p>The pages may also be filtered via the following options,</p>
+        <p>页面还可以通过以下选项再筛选，</p>
 
         <dl dt="width: 8em;">
             <dt>-max</dt>
             <dd>
-                The maximum number of items to list or open
-                (short name <em>-m</em>).
+		要列出或打开项的最大数目（短选项 <em>-m</em>）。
             </dd>
             <dt>-sort</dt>
             <dd>
-                The sort order of the results
-                (short name <em>-s</em>).
+		排列结果（短选项 <em>-s</em>）。
             </dd>
         </dl>
     </description>
 </item>
 
-<h2 tag="navigating">Navigating</h2>
+<h2 tag="navigating">导航</h2>
 
 <item>
     <tags><![CDATA[<open-home-directory> ~]]></tags>
     <spec>~</spec>
     <description short="true">
-        <p>Open home directory. Equivalent to <ex>:open ~/</ex></p>
+        <p>打开主目录。相当于 <ex>:open ~/</ex> 命令</p>
     </description>
 </item>
 
@@ -397,7 +339,7 @@
     <tags><![CDATA[<open-homepage> gh]]></tags>
     <spec>gh</spec>
     <description short="true">
-        <p>Go home. Opens the homepage in the current tab.</p>
+        <p>打开主页。在当前标签页中打开主页</p>
     </description>
 </item>
 
@@ -407,9 +349,7 @@
     <spec>gH</spec>
     <description>
         <p>
-            Go home in a new tab. Opens the homepage in a new tab.
-            The new tab is activated if <o>activate</o> contains
-            <str>homepage</str>.
+	    在新标签页中打开主页，如果 <o>activte</o> 选项中包含 <str>homepage</str>，则新打开的标签页置为当前。
         </p>
     </description>
 </item>
@@ -418,12 +358,10 @@
     <tags><![CDATA[<open-parent-path> gu]]></tags>
     <spec><oa>count</oa>gu</spec>
     <description short="true">
-        <p>Go to <oa>count</oa>th parent directory.</p>
+        <p>访问第 <oa>count</oa> 层父目录。</p>
 
         <p>
-            For example, at the URL
-            <tt>http://www.example.com/dir1/dir2/file.htm</tt>,
-            2<k>gu</k> opens <tt>http://www.example.com/dir1/</tt>.
+	    比如 URL <tt>http://www.example.com/dir1/dir2/file.htm</tt>，2<k>gu</k> 打开 <tt>http://www.example.com/dir1/</tt>。
         </p>
     </description>
 </item>
@@ -432,23 +370,21 @@
     <tags><![CDATA[<open-root-path> gU]]></tags>
     <spec>gU</spec>
     <description short="true">
-        <p>Go to the root of the web site.</p>
+        <p>访问网站根目录。</p>
 
         <p>
-            For example, at the URL
-            <tt>http://www.example.com/dir1/dir2/file.htm</tt>,
-            <k>gU</k> opens <tt>http://www.example.com/</tt>.
+	    比如 URL <tt>http://www.example.com/dir1/dir2/file.htm</tt>，<k>gU</k> 打开 <tt>http://www.example.com/</tt>。
         </p>
     </description>
 </item>
 
-<h2 tag="reloading">Reloading</h2>
+<h2 tag="reloading">重载</h2>
 
 <item>
     <tags>&lt;reload> r</tags>
     <spec>r</spec>
     <description short="true">
-        <p>Reload the current web page.</p>
+        <p>重载当前页面。</p>
     </description>
 </item>
 
@@ -456,7 +392,7 @@
     <tags>&lt;full-reload> R</tags>
     <spec>R</spec>
     <description short="true">
-        <p>Reload the current web page without using the cache.</p>
+        <p>重载当前页面，不使用缓存内容。</p>
     </description>
 </item>
 
@@ -465,8 +401,7 @@
     <spec>:re<oa>load</oa><oa>!</oa></spec>
     <description>
         <p>
-            Reload current web page. If <oa>!</oa> is given, reload
-            without using the cache.
+	    重载当前页面。<oa>!</oa> 表示重载但不使用缓存内容。
         </p>
     </description>
 </item>
@@ -476,13 +411,12 @@
     <spec>:reloada<oa>ll</oa><oa>!</oa></spec>
     <description>
         <p>
-            Reload all tabs. If <oa>!</oa> is given, reload without
-            using the cache.
+	    重载所有标签页。<oa>!</oa> 表示重载但不使用缓存内容。
         </p>
     </description>
 </item>
 
-<h2 tag="stopping">Stopping</h2>
+<h2 tag="stopping">停止</h2>
 
 <item>
     <tags><![CDATA[<stop-load> <C-c> :st :stop]]></tags>
@@ -490,7 +424,7 @@
     <strut/>
     <spec>:st<oa>op</oa></spec>
     <description short="true">
-        <p>Stop loading the current web page.</p>
+        <p>停止载入当前页面。</p>
     </description>
 </item>
 
@@ -498,22 +432,18 @@
     <tags>:stopa :stopall</tags>
     <spec>:stopa<oa>ll</oa></spec>
     <description short="true">
-        <p>Stop loading all web pages.</p>
+        <p>停止载入所有网页。</p>
     </description>
 </item>
 
-<h2 tag="writing save-file">Writing</h2>
+<h2 tag="writing save-file">写入</h2>
 
 <item>
     <tags>:w :write :sav :saveas</tags>
     <spec>:sav<oa>eas</oa><oa>!</oa> <oa>file</oa></spec>
     <description>
         <p>
-            Save current web page to disk. If <oa>file</oa> is omitted, save to
-            the page's default filename. If <oa>file</oa> is a directory or ends
-            with your platform's path separator, save to the page's default
-            filename in that directory. Existing documents will only be
-            overwritten if <oa>!</oa> is given.
+	    保存当前网页到硬盘。如果不提供 <oa>file</oa>，则以页面的默认文件名称保存。如果 <oa>file</oa> 是个目录，又或者以你的系统的目标分隔符结束，则以默认文件名保存到该目录。如果附加 <oa>!</oa>，则已有的文件会被覆盖。
         </p>
     </description>
 </item>
@@ -522,8 +452,7 @@
     <spec>:write >> <a>file</a></spec>
     <description>
         <p>
-            Appends the current web page to the file <a>file</a>. The given
-            file must already exist.
+	    追加当前网页内容到 <a>file</a>。所给出的文件必须存在。
         </p>
     </description>
 </item>
@@ -532,13 +461,12 @@
     <spec>:write !<a>cmd</a></spec>
     <description>
         <p>
-            Writes the current web page to <a>cmd</a> and prints the command's
-            output.
+	    将当前网页写入 <a>cmd</a> 并且输出命令结果。
         </p>
     </description>
 </item>
 
-<h2 tag="quitting save-session">Quitting</h2>
+<h2 tag="quitting save-session">退出</h2>
 
 <item>
     <tags>ZQ :x :exit</tags>
@@ -546,8 +474,7 @@
     <spec>:exit<oa>!</oa></spec>
     <description>
         <p>
-            Quit &dactyl.appName;, no matter how many tabs/windows are open.
-            The session is not stored. Use <oa>!</oa> to forcibly quit.
+	    退出 &dactyl.appName;，不管打开多少标签页/窗口。会话不保存。使用 <oa>!</oa> 强制退出。
         </p>
     </description>
 </item>
@@ -558,8 +485,7 @@
     <spec>:q<oa>uit</oa></spec>
     <description>
         <p>
-            Quit current tab. If this is the last tab in the window,
-            close the window.
+	    退出当前标签页。如果当前标签页是窗口里的最后一个标签页，则关闭窗口。
         </p>
     </description>
 </item>
@@ -570,8 +496,7 @@
     <spec>:quita<oa>ll</oa></spec>
     <description>
         <p>
-            Close the current &dactyl.appName; window, no matter how
-            many tabs are open.
+	    关闭当前 &dactyl.appName; 窗口，无论正打开多少个标签页。
         </p>
     </description>
 </item>
@@ -580,7 +505,7 @@
     <tags>:wc :wclose :winc :winclose</tags>
     <spec>:winc<oa>lose</oa></spec>
     <description short="true">
-        <p>Close the current window.</p>
+        <p>关闭当前窗口。</p>
     </description>
 </item>
 
@@ -588,7 +513,7 @@
     <tags>:winon :winonly</tags>
     <spec>:winon<oa>ly</oa></spec>
     <description short="true">
-        <p>Close all windows but the current.</p>
+        <p>关闭除开当前窗口外的所有其他窗口。</p>
     </description>
 </item>
 
@@ -598,15 +523,14 @@
     <strut/>
     <spec>:xa<oa>ll</oa></spec>
     <description short="true">
-        <p>Save the current session and quit.</p>
+        <p>保存当前会话并退出。</p>
         <note>
-            Unlike Vim, <ex>:wq</ex> closes the entire window rather
-            than just the current tab.
+	    不像 Vim，<ex>:wq</ex> 命令关闭整个窗口，而不仅当前标签页。
         </note>
     </description>
 </item>
 
-<h2 tag="current-directory">The current directory</h2>
+<h2 tag="current-directory">当前目录</h2>
 
 <item>
     <tags>:chd :chdir :cd</tags>
@@ -614,9 +538,7 @@
     <spec>:cd <oa>path</oa></spec>
     <description>
         <p>
-            Change the current directory. If <oa>path</oa> is
-            <em>-</em>, change to the previous directory. If it is
-            omitted, change to the home directory.
+	    改变当前目录。如果 <oa>path</oa> 内容是 <em>-</em>，则切换到前一个目录，如果为空，则切换到主目录。
         </p>
     </description>
 </item>
@@ -625,7 +547,7 @@
     <tags>:pw :pwd</tags>
     <spec>:pw<oa>d</oa></spec>
     <description short="true">
-        <p>Print the current directory name.</p>
+        <p>输出当前目录名。</p>
     </description>
 </item>
 
