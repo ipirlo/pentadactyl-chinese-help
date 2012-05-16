@@ -9,17 +9,14 @@
     xmlns="&xmlns.dactyl;"
     xmlns:html="&xmlns.html;">
 
-<h1 tag="buffer document">Buffer</h1>
+<h1 tag="buffer document">缓冲区</h1>
 <toc start="2"/>
 
 <p>
-    A buffer is a container that holds the given web page, including
-    all of its history and frames. Each tab contains exactly one
-    buffer, and for most purposes the two terms are interchangeable.
-    See <t>tabs</t> for more.
+    缓冲区是个容器，收纳着特定的网页，包括该网页所有的历史记录和结构。每个标签页有且仅有一个缓冲区，大部分时候，缓冲区与标签页的概念是可互换的。更多请查阅 <t>tabs</t>。
 </p>
 
-<h2 tag="buffer-information">Buffer information</h2>
+<h2 tag="buffer-information">缓冲区信息</h2>
 
 <item>
     <tags><![CDATA[<page-info> <C-g>]]></tags>
@@ -27,9 +24,7 @@
     <spec>&lt;C-g></spec>
     <description>
         <p>
-            Print the current file name along with basic page
-            information including last modification time, the number
-            of feeds present, and the page title.
+	    输出当前文件名及基本页面信息，包括最后修改时间，页面所有的订阅源数目以及页面标题。
         </p>
     </description>
 </item>
@@ -38,7 +33,7 @@
     <tags><![CDATA[<more-page-info> g<C-g>]]></tags>
     <spec>g&lt;C-g></spec>
     <description short="true">
-        <p>Print file information. Same as <ex>:pa<oa>geinfo</oa></ex>.</p>
+        <p>输出文件信息。同 <ex>:pa<oa>geinfo</oa></ex> 命令一样的作用。</p>
     </description>
 </item>
 
@@ -47,9 +42,7 @@
     <spec>:pa<oa>geinfo</oa> <oa>items</oa></spec>
     <description>
         <p>
-            Show various page information. The information provided
-            is determined by the value of <o>pageinfo</o>, or
-            <oa>items</oa> if present.
+	    显示页面的许多信息。要显示什么信息是由 <o>pageinfo</o> 选项决定的，又或者可以通过 <oa>items</oa> 指定。
         </p>
     </description>
 </item>
@@ -60,8 +53,7 @@
     <spec>gf</spec>
     <description>
         <p>
-            View source. Toggles between the source and rendered
-            content of the page.
+	    查看源。可以在页面源及渲染内容间切换。
         </p>
     </description>
 </item>
@@ -72,9 +64,7 @@
     <spec>gF</spec>
     <description>
         <p>
-            View source with an external editor. Opens the source
-            code of the current web site with the external editor
-            specified by the <o>editor</o> option.
+	    使用外部编辑器查看源。使用 <o>editor</o> 选项指定的外部编辑器来打开当前网站的源代码。
         </p>
     </description>
 </item>
@@ -84,15 +74,12 @@
     <spec>:vie<oa>wsource</oa><oa>!</oa> <oa>url</oa></spec>
     <description>
         <p>
-            View source code of current document. If <oa>url</oa> is
-            specified then view the source of that document. When
-            <oa>!</oa> is given, it is opened with the external
-            editor.
+	    查看当前文档源代码。如果指定 <oa>url</oa> 则查看该 url 所指的文件源代码。命令中带有 <oa>!</oa> 则通过外部编辑器打开。
         </p>
     </description>
 </item>
 
-<h2 tag="motion scrolling">Motion commands</h2>
+<h2 tag="motion scrolling">移动命令</h2>
 
 <item>
     <tags>&lt;scroll-begin> ^ 0</tags>
@@ -100,8 +87,7 @@
     <spec>0</spec>
     <description>
         <p>
-            Scroll to the absolute left of the document. Unlike in
-            Vim, <k>0</k> and <k>^</k> work exactly the same way.
+	    滚动到页面最左端。不像 Vim，这儿的 <k>0</k> 跟 <k>^</k> 的作用是一样的。
         </p>
     </description>
 </item>
@@ -110,7 +96,7 @@
     <tags>&lt;scroll-end> $</tags>
     <spec>$</spec>
     <description short="true">
-        <p>Scroll to the absolute right of the document</p>
+        <p>滚动到页面的最右端。</p>
     </description>
 </item>
 
@@ -120,9 +106,7 @@
     <spec><oa>count</oa>gg</spec>
     <description>
         <p>
-            Go to the top of the document. With <oa>count</oa>,
-            scroll vertically to <oa>count</oa> percent of the
-            document.
+	    转到文档顶部。<oa>count</oa> 表示转到整个文档高度的百分之 <oa>count</oa> 位置。
         </p>
     </description>
 </item>
@@ -133,9 +117,7 @@
     <spec><oa>count</oa>G</spec>
     <description>
         <p>
-            Go to the end of the document. With <oa>count</oa>,
-            go to the <oa>count</oa>th line as determined by <o>linenumbers</o>,
-            or by the line height of the document body otherwise.
+	    转到文档底部。<oa>count</oa> 表示转到由 <o>linenumbers</o> 又或者文档文体部分的行高决定的第 <oa>count</oa> 行位置。
         </p>
     </description>
 </item>
@@ -144,7 +126,7 @@
     <tags>&lt;scroll-percent> N% %</tags>
     <spec><a>count</a>%</spec>
     <description short="true">
-        <p>Scroll to <a>count</a> percent of the document.</p>
+        <p>滚动到文档百分之 <a>count</a> 位置。</p>
     </description>
 </item>
 
